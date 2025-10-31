@@ -1,0 +1,74 @@
+[gd_scene load_steps=11 format=3 uid="uid://dktwygg5rsfl6"]
+
+[ext_resource type="PackedScene" uid="uid://cpg4jsmfgna3p" path="res://JUEGO/Scenes/Cenith.tscn" id="1_6idw4"]
+[ext_resource type="Texture2D" uid="uid://nqt2g8eje5xl" path="res://JUEGO/Scenes/FondoPuente/fondo1.jpg" id="1_yqk44"]
+[ext_resource type="Texture2D" uid="uid://btf6e8puxrqul" path="res://JUEGO/Scenes/FondoPuente/fondo2.png" id="2_vsqn7"]
+[ext_resource type="Texture2D" uid="uid://b6i4dc7r1bv6t" path="res://JUEGO/Scenes/FondoPuente/fondo3.png" id="3_g4k5i"]
+[ext_resource type="Texture2D" uid="uid://bqqoeck5xo0xq" path="res://JUEGO/Scenes/FondoPuente/fondo4.png" id="4_wscdk"]
+[ext_resource type="Texture2D" uid="uid://d42yen6yakkc" path="res://JUEGO/Scenes/FondoPuente/estrellas.png" id="5_oqf1d"]
+[ext_resource type="Texture2D" uid="uid://dox2bsi2lyllb" path="res://JUEGO/Scenes/FondoPuente/nubes1.png" id="6_ccryp"]
+[ext_resource type="Texture2D" uid="uid://6so1gt5trwym" path="res://JUEGO/Scenes/FondoPuente/montaña3.png" id="7_0dvhy"]
+[ext_resource type="Texture2D" uid="uid://da4dx6edtr5ur" path="res://JUEGO/Scenes/Puente/puente-fortaleza.png" id="8_vsqn7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4k5i"]
+size = Vector2(358, 72)
+
+[node name="Puente_Fortaleza" type="Node2D"]
+
+[node name="Cenith" parent="." instance=ExtResource("1_6idw4")]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture_filter = 1
+texture = ExtResource("1_yqk44")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+texture_filter = 1
+texture = ExtResource("2_vsqn7")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+texture_filter = 1
+texture = ExtResource("3_g4k5i")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+texture_filter = 1
+texture = ExtResource("4_wscdk")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
+texture_filter = 1
+texture = ExtResource("5_oqf1d")
+hframes = 4
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6"]
+texture_filter = 1
+rotation = -0.000918756
+texture = ExtResource("6_ccryp")
+
+[node name="ParallaxLayer7" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer7"]
+texture_filter = 1
+texture = ExtResource("7_0dvhy")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+texture_filter = 1
+texture = ExtResource("8_vsqn7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 62)
+shape = SubResource("RectangleShape2D_g4k5i")
