@@ -398,7 +398,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Salto",
-"speed": 12.0
+"speed": 20.0
 }]
 
 [node name="Cenith" type="CharacterBody2D"]
@@ -417,8 +417,7 @@ rotation = 0.00196751
 scale = Vector2(0.656, 0.626)
 sprite_frames = SubResource("SpriteFrames_7lr6o")
 animation = &"Salto"
-frame = 2
-frame_progress = 0.58588
+frame_progress = 0.997439
 
 [node name="Camera2D" type="Camera2D" parent="."]
 rotation = 0.00129717
