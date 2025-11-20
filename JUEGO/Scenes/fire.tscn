@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://cksf51rg5c7b1"]
+
+[ext_resource type="Script" uid="uid://8xr6oapcvghf" path="res://JUEGO/Scenes/FondoPuente/fire.gd" id="1_wyp8g"]
+
+[sub_resource type="Curve" id="Curve_xgy1x"]
+_data = [Vector2(0.106509, 1), 0.0, 0.0, 0, 0, Vector2(0.905325, 0.458943), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_wyp8g"]
+offsets = PackedFloat32Array(0, 0.153846, 0.301282, 0.496795, 0.679487, 0.891026)
+colors = PackedColorArray(0.012431, 0.0506207, 0.286275, 1, 0.0625396, 0.106298, 0.484375, 1, 0.0857839, 0.117543, 0.482325, 1, 0.155733, 0.206537, 0.607514, 1, 0.23098, 0.302272, 0.742188, 1, 0.231373, 0.301961, 0.741176, 0)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qte17"]
+radius = 9.0
+
+[node name="Fire" type="Node2D"]
+script = ExtResource("1_wyp8g")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+amount = 2000
+lifetime = 0.5
+emission_shape = 1
+emission_sphere_radius = 10.0
+gravity = Vector2(0, -600)
+radial_accel_min = -50.0
+radial_accel_max = -40.0
+scale_amount_min = 0.5
+scale_amount_max = 2.0
+scale_amount_curve = SubResource("Curve_xgy1x")
+color_ramp = SubResource("Gradient_wyp8g")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -5)
+shape = SubResource("CapsuleShape2D_qte17")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.51
+autostart = true

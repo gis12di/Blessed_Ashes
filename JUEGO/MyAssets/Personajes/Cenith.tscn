@@ -1,7 +1,8 @@
-[gd_scene load_steps=58 format=3 uid="uid://cpg4jsmfgna3p"]
+[gd_scene load_steps=70 format=3 uid="uid://cpg4jsmfgna3p"]
 
 [ext_resource type="Script" uid="uid://04cf1u1xsvgk" path="res://JUEGO/MyAssets/Personajes/cenith.gd" id="1_8exod"]
 [ext_resource type="Texture2D" uid="uid://br5hgqbfb5g0k" path="res://JUEGO/MyAssets/Personajes/Cenith.png" id="1_drx0y"]
+[ext_resource type="Texture2D" uid="uid://bgbixkhsv14q1" path="res://JUEGO/MyAssets/Personajes/cenith_ataque.png" id="3_yx4nn"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gjc6u"]
 radius = 3.59994
@@ -219,6 +220,42 @@ region = Rect2(3008, 0, 64, 64)
 atlas = ExtResource("1_drx0y")
 region = Rect2(3072, 0, 64, 64)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ftm5m"]
+atlas = ExtResource("3_yx4nn")
+region = Rect2(0, 0, 135, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r5ug5"]
+atlas = ExtResource("3_yx4nn")
+region = Rect2(135, 0, 135, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jw281"]
+atlas = ExtResource("3_yx4nn")
+region = Rect2(270, 0, 135, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sjtck"]
+atlas = ExtResource("3_yx4nn")
+region = Rect2(405, 0, 135, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6dwy5"]
+atlas = ExtResource("3_yx4nn")
+region = Rect2(540, 0, 135, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_spvri"]
+atlas = ExtResource("3_yx4nn")
+region = Rect2(675, 0, 135, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j7i0r"]
+atlas = ExtResource("3_yx4nn")
+region = Rect2(810, 0, 135, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x4onr"]
+atlas = ExtResource("3_yx4nn")
+region = Rect2(945, 0, 135, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5im8m"]
+atlas = ExtResource("3_yx4nn")
+region = Rect2(1080, 0, 135, 64)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_7lr6o"]
 animations = [{
 "frames": [{
@@ -399,27 +436,81 @@ animations = [{
 "loop": true,
 "name": &"Salto",
 "speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ftm5m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r5ug5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jw281")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sjtck")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6dwy5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_spvri")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j7i0r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x4onr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5im8m")
+}],
+"loop": true,
+"name": &"ataque",
+"speed": 13.0
 }]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yx4nn"]
+radius = 9.0
+height = 26.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ftm5m"]
+radius = 8.0
+height = 26.0
 
 [node name="Cenith" type="CharacterBody2D"]
 script = ExtResource("1_8exod")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 2.8)
+position = Vector2(0, 2.7)
 rotation = 3.14159
-scale = Vector2(2.5, 2.5)
+scale = Vector2(2.5, 2.4)
 shape = SubResource("CapsuleShape2D_gjc6u")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(0, -2)
 rotation = 0.00196751
-scale = Vector2(0.656, 0.626)
+scale = Vector2(0.6, 0.573)
+skew = 0.0174533
 sprite_frames = SubResource("SpriteFrames_7lr6o")
-animation = &"Salto"
-frame_progress = 0.997439
+animation = &"ataque"
+frame = 6
+frame_progress = 0.559073
 
 [node name="Camera2D" type="Camera2D" parent="."]
 rotation = 0.00129717
 scale = Vector2(0.5, 0.5)
 zoom = Vector2(4, 4)
+
+[node name="CenithDealDamageZone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CenithDealDamageZone"]
+position = Vector2(21, 0)
+shape = SubResource("CapsuleShape2D_yx4nn")
+
+[node name="CenithHitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CenithHitbox"]
+position = Vector2(0, 3)
+shape = SubResource("CapsuleShape2D_ftm5m")
