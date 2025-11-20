@@ -499,12 +499,11 @@ frame = 6
 frame_progress = 0.559073
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(113, 0)
+position = Vector2(21, -2)
 rotation = 0.00129717
 scale = Vector2(0.5, 0.5)
 zoom = Vector2(4, 4)
 limit_top = 0
-limit_bottom = 180
 
 [node name="CenithDealDamageZone" type="Area2D" parent="."]
 

@@ -1610,14 +1610,14 @@ texture_filter = 1
 texture = ExtResource("8_f3a35")
 centered = false
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="Puente" type="StaticBody2D" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+[node name="Sprite2D" type="Sprite2D" parent="Puente"]
 texture_filter = 1
 texture = ExtResource("8_vsqn7")
 centered = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puente"]
 position = Vector2(179, 160)
 shape = SubResource("RectangleShape2D_g4k5i")
 
@@ -1632,11 +1632,11 @@ offset_top = -15.0
 offset_right = 1817.0
 offset_bottom = 222.0
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Puerta" type="Area2D" parent="."]
 script = ExtResource("14_y3p1d")
 next_scene_path = "res://JUEGO/Scenes/Fortaleza/fortaleza.tscn"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta"]
 position = Vector2(1215.78, 115.795)
 rotation = -0.0543876
 shape = SubResource("CapsuleShape2D_y70mn")
@@ -1648,5 +1648,5 @@ script = ExtResource("15_y70mn")
 position = Vector2(813.75, 204)
 shape = SubResource("RectangleShape2D_tagal")
 
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Puerta" to="Puerta" method="_on_body_entered"]
 [connection signal="body_entered" from="killzone" to="killzone" method="_on_body_entered"]

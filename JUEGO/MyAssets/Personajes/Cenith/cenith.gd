@@ -11,6 +11,7 @@ var is_attacking = false
 
 
 func _ready():
+
 	Global.playerBody = self
 	Global.CenithAlive = true
 	Global.CenithHitbox = $CenithHitbox
@@ -151,3 +152,4 @@ func apply_attack_damage():
 		if area.get_parent().has_method("take_damage"):
 			area.get_parent().take_damage(Global.CenithDamageAmount)
 			print("🎯 Golpeé a: ", area.get_parent().name)
+			
