@@ -64,11 +64,6 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Jugar"
 
-[node name="Opciones" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "Opciones"
-
 [node name="Salir" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
@@ -93,5 +88,4 @@ text = "Blessed
 "
 
 [connection signal="pressed" from="VBoxContainer/Jugar" to="." method="_on_jugar_pressed"]
-[connection signal="pressed" from="VBoxContainer/Opciones" to="." method="_on_opciones_pressed"]
 [connection signal="pressed" from="VBoxContainer/Salir" to="." method="_on_salir_pressed"]
