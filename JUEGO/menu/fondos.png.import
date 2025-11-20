@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bdch2plqoxk55"
-path="res://.godot/imported/fondos.png-64124a3702160b8f31f3df4a4b36f9ed.ctex"
+path="res://.godot/imported/fondos.png-bb9148a195938b19b381bfe746bae956.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://JUEGO/fondos.png"
-dest_files=["res://.godot/imported/fondos.png-64124a3702160b8f31f3df4a4b36f9ed.ctex"]
+source_file="res://JUEGO/menu/fondos.png"
+dest_files=["res://.godot/imported/fondos.png-bb9148a195938b19b381bfe746bae956.ctex"]
 
 [params]
 
