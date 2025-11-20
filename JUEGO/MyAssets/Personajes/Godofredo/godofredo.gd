@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
-class_name esqueleto
+class_name godofredo
 
 const speed = 30
-var is_esqueleto_chase: bool = true
+var is_godofredo_chase: bool = true
 
 var health = 100
 var health_max = 100
@@ -36,12 +36,12 @@ func _process(delta):
 		velocity.x = 0
 		
 	if Global.CenithAlive:
-		is_esqueleto_chase = true
+		is_godofredo_chase = true
 	elif !Global.CenithAlive:
-		is_esqueleto_chase = false
+		is_godofredo_chase = false
 		
-	Global.esqueletoDamageAmount = damage_to_deal
-	Global.esqueletoDamageZone = $esqueletoDealDamageArea
+	Global.godofredoDamageAmount = damage_to_deal
+	Global.godofredoDamageZone = $godofredoDealDamageArea
 	Cenith = Global.playerBody
 	move(delta)
 	handle_animation()
@@ -49,9 +49,9 @@ func _process(delta):
 
 func move(delta):
 	if !dead:
-		if !is_esqueleto_chase:
+		if !is_godofredo_chase:
 			velocity += dir * speed * delta
-		elif is_esqueleto_chase and !taking_damage:
+		elif is_godofredo_chase and !taking_damage:
 			var dir_to_Cenith = position.direction_to(Cenith.position) * speed
 			velocity.x = dir_to_Cenith.x
 			dir.x = abs(velocity.x) / velocity.x
@@ -65,7 +65,7 @@ func move(delta):
 func handle_animation():
 	var anim_sprite = $AnimatedSprite2D
 	if !dead and !taking_damage and !is_dealing_damage:
-		anim_sprite.play("caminar")
+		anim_sprite.play("camina")
 		if dir.x == -1:
 			anim_sprite.flip_h = true
 		elif dir.x == 1:
@@ -79,7 +79,7 @@ func handle_animation():
 		anim_sprite.play("muerte")
 		start_death_timer()
 	elif !dead and is_dealing_damage:
-		anim_sprite.play("ataque")
+		anim_sprite.play("ataca")
 
 # Nuevo método para el cooldown de daño
 func start_taking_damage_cooldown():
@@ -106,9 +106,10 @@ func handle_death():
 
 func _on_direccion_timer_timeout():
 	$DireccionTimer.wait_time = choose([1.5,2.0,2.5])
-	if !is_esqueleto_chase:
+	if !is_godofredo_chase:
 		dir = choose([Vector2.RIGHT, Vector2.LEFT])
 		velocity.x = 0
+
 
 func choose(array):
 	array.shuffle()
@@ -123,7 +124,7 @@ func take_damage(damage):
 		dead = true
 	print(str(self), "current health is ", health)
 
-func _on_esqueleto_deal_damage_area_area_entered(area: Area2D) -> void:
+func _on_godofredo_deal_damage_area_area_entered(area: Area2D) -> void:
 	if area == Global.CenithHitbox:
 		is_dealing_damage = true
 
@@ -143,7 +144,7 @@ func start_attack_cooldown():
 			is_dealing_damage = false
 
 
-func _on_esqueleto_hitbox_area_entered(area: Area2D) -> void:
+func _on_godofredo_hitbox_area_entered(area: Area2D) -> void:
 	var damage = Global.CenithDamageAmount
 	if area == Global.CenithDamageZone: 
 		take_damage(damage)

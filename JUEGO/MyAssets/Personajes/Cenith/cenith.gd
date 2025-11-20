@@ -76,6 +76,9 @@ func check_hitbox():
 
 	if hitbox.get_parent() is esqueleto:
 		damage = Global.esqueletoDamageAmount
+	
+	elif hitbox.get_parent() is godofredo:
+		damage = Global.godofredoDamageAmount
 
 	if damage > 0 and can_take_damage:                
 		can_take_damage = false

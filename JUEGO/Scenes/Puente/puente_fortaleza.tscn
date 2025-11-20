@@ -1542,8 +1542,11 @@ tile_set = SubResource("TileSet_y3p1d")
 
 [node name="Cenith" parent="." instance=ExtResource("1_6idw4")]
 position = Vector2(54.6949, 104.773)
+max_health = null
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scale = Vector2(1.1, 1.2)
+transform = Transform2D(1.1, 0, 0, 1.2, 0, 0)
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.1, 1)

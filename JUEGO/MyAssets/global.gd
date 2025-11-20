@@ -8,3 +8,6 @@ var CenithHitbox: Area2D
 
 var esqueletoDamageZone:Area2D
 var esqueletoDamageAmount: int
+
+var godofredoDamageZone:Area2D
+var godofredoDamageAmount: int

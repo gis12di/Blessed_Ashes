@@ -274,5 +274,5 @@ position = Vector2(-1, 11)
 shape = SubResource("CircleShape2D_5ne4l")
 
 [connection signal="timeout" from="DireccionTimer" to="." method="_on_direccion_timer_timeout"]
-[connection signal="area_entered" from="esqueletoHitbox" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="esqueletoHitbox" to="." method="_on_esqueleto_hitbox_area_entered"]
 [connection signal="area_entered" from="esqueletoDealDamageArea" to="." method="_on_esqueleto_deal_damage_area_area_entered"]
