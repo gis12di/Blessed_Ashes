@@ -66,9 +66,9 @@ func handle_animation():
 	var anim_sprite = $AnimatedSprite2D
 	if !dead and !taking_damage and !is_dealing_damage:
 		anim_sprite.play("camina")
-		if dir.x == -1:
+		if dir.x == 1:
 			anim_sprite.flip_h = true
-		elif dir.x == 1:
+		elif dir.x == -1:
 			anim_sprite.flip_h = false
 	elif !dead and taking_damage and !is_dealing_damage:
 		anim_sprite.play("recibe_golpe")
