@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cksf51rg5c7b1" path="res://JUEGO/Scenes/fire.tscn" id="5_fi75l"]
 [ext_resource type="PackedScene" uid="uid://6mf2q1vljwpf" path="res://JUEGO/MyAssets/Personajes/esqueleto/esqueleto.tscn" id="6_e64ia"]
 [ext_resource type="Texture2D" uid="uid://bg7bhtlhwq7de" path="res://JUEGO/Scenes/Fortaleza/column.png" id="7_tp3vc"]
-[ext_resource type="PackedScene" uid="uid://drotdgbm3c6gb" path="res://JUEGO/MyAssets/Personajes/Godofredo/Godofredo.tscn" id="9_rs2xd"]
+[ext_resource type="PackedScene" uid="uid://drotdgbm3c6gb" path="res://JUEGO/MyAssets/Personajes/Godofredo/godofredo.tscn" id="9_rs2xd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tp3vc"]
 texture = ExtResource("1_ecnho")
@@ -2544,7 +2544,6 @@ tile_set = SubResource("TileSet_tp3vc")
 
 [node name="Cenith" parent="." instance=ExtResource("2_810g4")]
 position = Vector2(54.6949, 104.773)
-max_health = null
 
 [node name="Fire" parent="." instance=ExtResource("5_fi75l")]
 position = Vector2(246, 251)
@@ -2609,6 +2608,7 @@ up_direction = Vector2(0, -1)
 
 [node name="Godofredo" parent="." instance=ExtResource("9_rs2xd")]
 position = Vector2(-184.989, 355.966)
+up_direction = Vector2(0.707107, -0.707107)
 
 [node name="Column2" type="Sprite2D" parent="."]
 position = Vector2(443, 352)
