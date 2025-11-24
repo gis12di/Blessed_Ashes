@@ -1542,6 +1542,7 @@ tile_set = SubResource("TileSet_y3p1d")
 
 [node name="Cenith" parent="." instance=ExtResource("1_6idw4")]
 position = Vector2(54.6949, 104.773)
+max_health = 100
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 scale = Vector2(1.1, 1.2)

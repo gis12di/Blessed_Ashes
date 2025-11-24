@@ -2544,6 +2544,7 @@ tile_set = SubResource("TileSet_tp3vc")
 
 [node name="Cenith" parent="." instance=ExtResource("2_810g4")]
 position = Vector2(54.6949, 104.773)
+max_health = 100
 
 [node name="Fire" parent="." instance=ExtResource("5_fi75l")]
 position = Vector2(246, 251)

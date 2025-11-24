@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://ccwf5br4qulpl"]
+[gd_scene load_steps=6 format=3 uid="uid://ccwf5br4qulpl"]
 
 [ext_resource type="Texture2D" uid="uid://bh4r2l51dfo8i" path="res://JUEGO/MyAssets/Fondos/FondoMenuPrincipal.png" id="1_c7a87"]
+[ext_resource type="Script" uid="uid://c6pfyftyxlsvg" path="res://JUEGO/Scenes/MenuPrincipal/menu_principal.gd" id="1_jobek"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jobek"]
 bg_color = Color(0.936647, 0.789046, 0.224345, 1)
@@ -18,6 +19,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_jobek")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -77,3 +79,7 @@ theme_override_font_sizes/font_size = 50
 theme_override_styles/hover = SubResource("StyleBoxFlat_p050g")
 theme_override_styles/normal = SubResource("StyleBoxFlat_c7a87")
 text = "SALIR"
+
+[connection signal="pressed" from="VBoxContainer/jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="VBoxContainer/opciones" to="." method="_on_opciones_pressed"]
+[connection signal="pressed" from="VBoxContainer/salir" to="." method="_on_salir_pressed"]
