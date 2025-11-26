@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://qgyb3e8tbqfa"]
+[gd_scene load_steps=21 format=4 uid="uid://qgyb3e8tbqfa"]
 
 [ext_resource type="Texture2D" uid="uid://duvtbw85c1ljg" path="res://JUEGO/Scenes/Fortaleza/Assets.png" id="1_ecnho"]
 [ext_resource type="Texture2D" uid="uid://dsrt2rjslqqw" path="res://JUEGO/Scenes/Fortaleza/backgrounds.png" id="2_5vefc"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bg7bhtlhwq7de" path="res://JUEGO/Scenes/Fortaleza/column.png" id="7_tp3vc"]
 [ext_resource type="PackedScene" uid="uid://drotdgbm3c6gb" path="res://JUEGO/MyAssets/Personajes/Godofredo/Godofredo.tscn" id="9_rs2xd"]
 [ext_resource type="PackedScene" uid="uid://1eveo08b30xd" path="res://JUEGO/Scenes/MenuOpciones/FpsLabel.tscn" id="11_b1c7h"]
+[ext_resource type="PackedScene" uid="uid://c5yroomdiufhn" path="res://JUEGO/Scenes/MenuPausa/pausa.tscn" id="12_cqhg3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tp3vc"]
 texture = ExtResource("1_ecnho")
@@ -2547,6 +2548,19 @@ tile_set = SubResource("TileSet_tp3vc")
 position = Vector2(54.6949, 104.773)
 max_health = 100
 
+[node name="Camera2D" type="Camera2D" parent="Cenith"]
+position = Vector2(21, -2)
+rotation = 0.00129717
+scale = Vector2(0.5, 0.5)
+zoom = Vector2(4, 4)
+limit_top = 0
+
+[node name="FpsLabel" parent="Cenith/Camera2D" instance=ExtResource("11_b1c7h")]
+offset_left = -285.597
+offset_top = -159.176
+offset_right = -245.597
+offset_bottom = -136.176
+
 [node name="Fire" parent="." instance=ExtResource("5_fi75l")]
 position = Vector2(246, 251)
 damage_per_tick = 10
@@ -2628,10 +2642,4 @@ position = Vector2(374, 352)
 scale = Vector2(0.608, 0.511)
 texture = ExtResource("7_tp3vc")
 
-[node name="FpsLabel" parent="." instance=ExtResource("11_b1c7h")]
-visible = true
-offset_left = -68.0
-offset_top = 23.0
-offset_right = -28.0
-offset_bottom = 46.0
-scale = Vector2(0.5, 0.5)
+[node name="Pausa" parent="." instance=ExtResource("12_cqhg3")]
