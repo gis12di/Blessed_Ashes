@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cksf51rg5c7b1" path="res://JUEGO/Scenes/fire.tscn" id="5_fi75l"]
 [ext_resource type="PackedScene" uid="uid://6mf2q1vljwpf" path="res://JUEGO/MyAssets/Personajes/esqueleto/esqueleto.tscn" id="6_e64ia"]
 [ext_resource type="Texture2D" uid="uid://bg7bhtlhwq7de" path="res://JUEGO/Scenes/Fortaleza/column.png" id="7_tp3vc"]
-[ext_resource type="PackedScene" uid="uid://drotdgbm3c6gb" path="res://JUEGO/MyAssets/Personajes/Godofredo/godofredo.tscn" id="9_rs2xd"]
+[ext_resource type="PackedScene" uid="uid://drotdgbm3c6gb" path="res://JUEGO/MyAssets/Personajes/Godofredo/Godofredo.tscn" id="9_rs2xd"]
 [ext_resource type="PackedScene" uid="uid://1eveo08b30xd" path="res://JUEGO/Scenes/MenuOpciones/FpsLabel.tscn" id="11_b1c7h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tp3vc"]
