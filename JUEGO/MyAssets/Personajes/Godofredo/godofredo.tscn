@@ -282,7 +282,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"ataca",
-"speed": 9.0
+"speed": 16.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -438,24 +438,27 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kbt3g"]
-radius = 26.0
+radius = 21.0
 height = 70.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1v032"]
-radius = 31.0
-height = 68.0
+radius = 47.0
+height = 104.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vmh8c"]
-radius = 38.0
-height = 76.0
+radius = 25.0
+height = 70.0
 
 [node name="Godofredo" type="CharacterBody2D"]
 up_direction = Vector2(0.707107, -0.707107)
 script = ExtResource("1_yqjl6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-2, -30)
+position = Vector2(6, -30)
 sprite_frames = SubResource("SpriteFrames_d2oo4")
+animation = &"ataca"
+frame = 6
+frame_progress = 0.952665
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -470,14 +473,15 @@ autostart = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="godofredoHitbox"]
 position = Vector2(0, 13)
 shape = SubResource("CapsuleShape2D_1v032")
+debug_color = Color(0.7, 0.306023, 0.253668, 0.42)
 
 [node name="godofredoDealDamageArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="godofredoDealDamageArea"]
 position = Vector2(-1, 13)
 shape = SubResource("CapsuleShape2D_vmh8c")
+debug_color = Color(0.160032, 0.7, 0.194689, 0.42)
 
 [connection signal="timeout" from="DireccionTimer" to="." method="_on_direccion_timer_timeout"]
-[connection signal="area_entered" from="godofredoHitbox" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="godofredoHitbox" to="." method="_on_godofredo_hitbox_area_entered"]
 [connection signal="area_entered" from="godofredoDealDamageArea" to="." method="_on_godofredo_deal_damage_area_area_entered"]
