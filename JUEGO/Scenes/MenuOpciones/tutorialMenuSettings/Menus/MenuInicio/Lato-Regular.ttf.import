@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dxj17i055lere"
-path="res://.godot/imported/Lato-Regular.ttf-66fd2bb2c789be632b122e712831afcc.fontdata"
+path="res://.godot/imported/Lato-Regular.ttf-5bc7aa8cfd6aad38873cad93712521ae.fontdata"
 
 [deps]
 
-source_file="res://JUEGO/Scenes/MenuOpciones/tutorialMenuSettings/Menus/MenuInicio/Lato-Regular.ttf"
-dest_files=["res://.godot/imported/Lato-Regular.ttf-66fd2bb2c789be632b122e712831afcc.fontdata"]
+source_file="res://Menus/MenuInicio/Lato-Regular.ttf"
+dest_files=["res://.godot/imported/Lato-Regular.ttf-5bc7aa8cfd6aad38873cad93712521ae.fontdata"]
 
 [params]
 
