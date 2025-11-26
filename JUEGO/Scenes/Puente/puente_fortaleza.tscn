@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://dktwygg5rsfl6"]
+[gd_scene load_steps=26 format=4 uid="uid://dktwygg5rsfl6"]
 
 [ext_resource type="PackedScene" uid="uid://cpg4jsmfgna3p" path="res://JUEGO/MyAssets/Personajes/Cenith/Cenith.tscn" id="1_6idw4"]
 [ext_resource type="Texture2D" uid="uid://nqt2g8eje5xl" path="res://JUEGO/Scenes/FondoPuente/fondo1.jpg" id="1_yqk44"]
@@ -15,7 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://b3e3wxnae4q78" path="res://JUEGO/Scenes/plataformas.png" id="12_tagal"]
 [ext_resource type="Script" uid="uid://br7t7annljs6u" path="res://JUEGO/Scenes/Puente/puerta.gd" id="14_y3p1d"]
 [ext_resource type="Script" uid="uid://cmpt3kv7l6mjs" path="res://JUEGO/Scenes/Puente/killzone.gd" id="15_y70mn"]
-[ext_resource type="PackedScene" uid="uid://1eveo08b30xd" path="res://JUEGO/Scenes/MenuOpciones/FpsLabel.tscn" id="16_tagal"]
 [ext_resource type="PackedScene" uid="uid://c5yroomdiufhn" path="res://JUEGO/Scenes/MenuPausa/pausa.tscn" id="17_qvvjl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ymseb"]
@@ -907,12 +906,6 @@ rotation = 0.00129717
 scale = Vector2(0.5, 0.5)
 zoom = Vector2(4, 4)
 limit_top = 0
-
-[node name="FpsLabel" parent="Cenith/Camera2D2" instance=ExtResource("16_tagal")]
-offset_left = -285.597
-offset_top = -159.176
-offset_right = -245.597
-offset_bottom = -136.176
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 scale = Vector2(1.1, 1.3)

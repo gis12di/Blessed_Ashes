@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://qgyb3e8tbqfa"]
+[gd_scene load_steps=20 format=4 uid="uid://qgyb3e8tbqfa"]
 
 [ext_resource type="Texture2D" uid="uid://duvtbw85c1ljg" path="res://JUEGO/Scenes/Fortaleza/Assets.png" id="1_ecnho"]
 [ext_resource type="Texture2D" uid="uid://dsrt2rjslqqw" path="res://JUEGO/Scenes/Fortaleza/backgrounds.png" id="2_5vefc"]
@@ -9,8 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cksf51rg5c7b1" path="res://JUEGO/Scenes/Fortaleza/fire.tscn" id="5_fi75l"]
 [ext_resource type="PackedScene" uid="uid://6mf2q1vljwpf" path="res://JUEGO/MyAssets/Personajes/esqueleto/esqueleto.tscn" id="6_e64ia"]
 [ext_resource type="Texture2D" uid="uid://bg7bhtlhwq7de" path="res://JUEGO/Scenes/Fortaleza/column.png" id="7_tp3vc"]
-[ext_resource type="PackedScene" uid="uid://drotdgbm3c6gb" path="res://JUEGO/MyAssets/Personajes/Godofredo/Godofredo.tscn" id="9_rs2xd"]
-[ext_resource type="PackedScene" uid="uid://1eveo08b30xd" path="res://JUEGO/Scenes/MenuOpciones/FpsLabel.tscn" id="11_b1c7h"]
+[ext_resource type="PackedScene" uid="uid://drotdgbm3c6gb" path="res://JUEGO/MyAssets/Personajes/Godofredo/godofredo.tscn" id="9_rs2xd"]
 [ext_resource type="PackedScene" uid="uid://c5yroomdiufhn" path="res://JUEGO/Scenes/MenuPausa/pausa.tscn" id="12_cqhg3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tp3vc"]
@@ -2554,12 +2553,6 @@ rotation = 0.00129717
 scale = Vector2(0.5, 0.5)
 zoom = Vector2(4, 4)
 limit_top = 0
-
-[node name="FpsLabel" parent="Cenith/Camera2D" instance=ExtResource("11_b1c7h")]
-offset_left = -285.597
-offset_top = -159.176
-offset_right = -245.597
-offset_bottom = -136.176
 
 [node name="Fire" parent="." instance=ExtResource("5_fi75l")]
 position = Vector2(246, 251)
