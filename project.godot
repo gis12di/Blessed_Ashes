@@ -18,7 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*res://JUEGO/MyAssets/global.gd"
-GlobalSettings="*res://Global_settings.gd"
+GlobalSettings="*res://GlobalSettings.gd"
 Save="*res://save.gd"
 
 [input]
