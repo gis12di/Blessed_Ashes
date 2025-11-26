@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cksf51rg5c7b1"]
 
-[ext_resource type="Script" uid="uid://8xr6oapcvghf" path="res://JUEGO/Scenes/FondoPuente/fire.gd" id="1_wyp8g"]
+[ext_resource type="Script" uid="uid://8xr6oapcvghf" path="res://JUEGO/Scenes/Fortaleza/fire.gd" id="1_wyp8g"]
 
 [sub_resource type="Curve" id="Curve_xgy1x"]
 _data = [Vector2(0.106509, 1), 0.0, 0.0, 0, 0, Vector2(0.905325, 0.458943), 0.0, 0.0, 0, 0]
