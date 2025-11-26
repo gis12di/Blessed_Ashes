@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://dktwygg5rsfl6"]
+[gd_scene load_steps=26 format=4 uid="uid://dktwygg5rsfl6"]
 
 [ext_resource type="PackedScene" uid="uid://cpg4jsmfgna3p" path="res://JUEGO/MyAssets/Personajes/Cenith/Cenith.tscn" id="1_6idw4"]
 [ext_resource type="Texture2D" uid="uid://nqt2g8eje5xl" path="res://JUEGO/Scenes/FondoPuente/fondo1.jpg" id="1_yqk44"]
@@ -15,6 +15,7 @@
 [ext_resource type="Shader" uid="uid://dqr8eteihljvt" path="res://JUEGO/Scenes/Puente/Difuminado.gdshader" id="11_21wat"]
 [ext_resource type="Script" uid="uid://br7t7annljs6u" path="res://JUEGO/Scenes/Puente/puerta.gd" id="14_y3p1d"]
 [ext_resource type="Script" uid="uid://cmpt3kv7l6mjs" path="res://JUEGO/Scenes/Puente/killzone.gd" id="15_y70mn"]
+[ext_resource type="PackedScene" uid="uid://1eveo08b30xd" path="res://JUEGO/Scenes/MenuOpciones/FpsLabel.tscn" id="16_tagal"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ymseb"]
 texture = ExtResource("10_lna1f")
@@ -1650,6 +1651,8 @@ script = ExtResource("15_y70mn")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
 position = Vector2(813.75, 204)
 shape = SubResource("RectangleShape2D_tagal")
+
+[node name="FpsLabel" parent="." instance=ExtResource("16_tagal")]
 
 [connection signal="body_entered" from="Puerta" to="Puerta" method="_on_body_entered"]
 [connection signal="body_entered" from="killzone" to="killzone" method="_on_body_entered"]
