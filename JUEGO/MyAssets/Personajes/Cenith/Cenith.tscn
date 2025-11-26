@@ -1,8 +1,9 @@
-[gd_scene load_steps=70 format=3 uid="uid://cpg4jsmfgna3p"]
+[gd_scene load_steps=71 format=3 uid="uid://cpg4jsmfgna3p"]
 
 [ext_resource type="Script" uid="uid://04cf1u1xsvgk" path="res://JUEGO/MyAssets/Personajes/Cenith/cenith.gd" id="1_8exod"]
 [ext_resource type="Texture2D" uid="uid://br5hgqbfb5g0k" path="res://JUEGO/MyAssets/Personajes/Cenith/Cenith.png" id="1_drx0y"]
 [ext_resource type="Texture2D" uid="uid://bgbixkhsv14q1" path="res://JUEGO/MyAssets/Personajes/Cenith/cenith_ataque.png" id="3_yx4nn"]
+[ext_resource type="PackedScene" uid="uid://bgu8jb376uwmo" path="res://JUEGO/Scenes/BarraVida/BarraVida.tscn" id="4_e7fmi"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gjc6u"]
 radius = 3.59994
@@ -509,3 +510,11 @@ shape = SubResource("CapsuleShape2D_yx4nn")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CenithHitbox"]
 position = Vector2(0, 3)
 shape = SubResource("CapsuleShape2D_ftm5m")
+
+[node name="BarraVida" type="CanvasLayer" parent="."]
+
+[node name="BarraVida" parent="BarraVida" instance=ExtResource("4_e7fmi")]
+offset_top = 55.0
+offset_right = 320.0
+offset_bottom = 135.0
+value = 100.0

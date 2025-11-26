@@ -9,6 +9,7 @@ var can_take_damage = true
 var attack_input = false
 var is_attacking = false
 
+@onready var health_bar = $BarraVida/BarraVida
 
 func _ready():
 	is_attacking = false
@@ -25,6 +26,10 @@ func _ready():
 	# 🔥 IMPORTANTE: Desactivar la zona de daño al inicio
 	$CenithDealDamageZone.monitoring = false
 	$CenithDealDamageZone.monitorable = false
+	
+	# Configurar la barra de vida
+	health_bar.max_value = max_health
+	health_bar.value = current_health
 
 func _physics_process(delta: float) -> void:
 	check_hitbox()
@@ -102,6 +107,7 @@ func start_damage_cooldown():
 
 func take_damage(amount: int) -> void:
 	current_health -= amount
+	health_bar.value = current_health  # Actualizar la barra
 	print("🔥 Recibí daño:", amount, "| HP:", current_health)
 
 	if current_health <= 0:
