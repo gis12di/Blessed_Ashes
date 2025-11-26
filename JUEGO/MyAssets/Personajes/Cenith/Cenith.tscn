@@ -1,10 +1,12 @@
-[gd_scene load_steps=72 format=3 uid="uid://cpg4jsmfgna3p"]
+[gd_scene load_steps=74 format=3 uid="uid://cpg4jsmfgna3p"]
 
 [ext_resource type="Script" uid="uid://04cf1u1xsvgk" path="res://JUEGO/MyAssets/Personajes/Cenith/cenith.gd" id="1_8exod"]
 [ext_resource type="Texture2D" uid="uid://br5hgqbfb5g0k" path="res://JUEGO/MyAssets/Personajes/Cenith/Cenith.png" id="1_drx0y"]
 [ext_resource type="Texture2D" uid="uid://bgbixkhsv14q1" path="res://JUEGO/MyAssets/Personajes/Cenith/cenith_ataque.png" id="3_yx4nn"]
-[ext_resource type="PackedScene" uid="uid://bgu8jb376uwmo" path="res://JUEGO/Scenes/BarraVida/BarraVida.tscn" id="4_e7fmi"]
+[ext_resource type="Texture2D" uid="uid://c0j7hmgfv7cg3" path="res://JUEGO/MyAssets/AssetsBarraVida/LifeHealing2.png" id="4_d5x4p"]
+[ext_resource type="Texture2D" uid="uid://jebvxxpsjbnx" path="res://JUEGO/MyAssets/AssetsBarraVida/LifeHealing1.png" id="5_23pvk"]
 [ext_resource type="PackedScene" uid="uid://1eveo08b30xd" path="res://JUEGO/Scenes/MenuOpciones/FpsLabel.tscn" id="5_piel2"]
+[ext_resource type="Texture2D" uid="uid://cjtv35hm3ilrp" path="res://JUEGO/MyAssets/AssetsBarraVida/LifeHealing3.png" id="6_rv0vb"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gjc6u"]
 radius = 3.59994
@@ -514,12 +516,15 @@ shape = SubResource("CapsuleShape2D_ftm5m")
 
 [node name="BarraVida" type="CanvasLayer" parent="."]
 
-[node name="BarraVida" parent="BarraVida" instance=ExtResource("4_e7fmi")]
-offset_left = 1.0
-offset_top = 24.0
-offset_right = 321.0
-offset_bottom = 104.0
+[node name="BarraVida" type="TextureProgressBar" parent="BarraVida"]
+offset_left = 3.0
+offset_top = 26.0
+offset_right = 195.0
+offset_bottom = 74.0
 value = 100.0
+texture_under = ExtResource("4_d5x4p")
+texture_over = ExtResource("5_23pvk")
+texture_progress = ExtResource("6_rv0vb")
 
 [node name="FPS" type="CanvasLayer" parent="."]
 
