@@ -10,7 +10,7 @@ func _on_opciones_pressed() -> void:
 	print("saliendo del juego...")
 	$SettingsMenu.popup()
 
-
+#HOLA
 func _on_salir_pressed() -> void:
 	print("saliendo del juego...")
 	get_tree().quit()
