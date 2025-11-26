@@ -480,7 +480,6 @@ height = 26.0
 
 [node name="Cenith" type="CharacterBody2D"]
 script = ExtResource("1_8exod")
-max_health = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2.7)

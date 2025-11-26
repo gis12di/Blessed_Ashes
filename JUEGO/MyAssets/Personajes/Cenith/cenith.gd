@@ -11,12 +11,16 @@ var is_attacking = false
 
 
 func _ready():
+	is_attacking = false
+	attack_input = false
 
 	Global.playerBody = self
 	Global.CenithAlive = true
 	Global.CenithHitbox = $CenithHitbox
 	Global.CenithDamageZone = $CenithDealDamageZone
 	Global.CenithDamageAmount = 15
+	
+	$AnimatedSprite2D.play("Existir")
 	
 	# 🔥 IMPORTANTE: Desactivar la zona de daño al inicio
 	$CenithDealDamageZone.monitoring = false
@@ -32,7 +36,7 @@ func _physics_process(delta: float) -> void:
 	# Saltar
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-		$AnimatedSprite2D.play("Saltar")
+		$AnimatedSprite2D.play("Salto")
 
 	# Movimiento horizontal
 	var direction := Input.get_axis("ui_left", "ui_right")
@@ -102,11 +106,11 @@ func take_damage(amount: int) -> void:
 
 	if current_health <= 0:
 		Global.CenithAlive = false
-		die()
+		call_deferred("die")
 
 func die():
 	print("💀 Jugador muerto")
-	get_tree().reload_current_scene()
+	get_tree().call_deferred("reload_current_scene")
 
 func _input(event):
 	if event.is_action_pressed("atacar") and not is_attacking:
