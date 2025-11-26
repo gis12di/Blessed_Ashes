@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cpg4jsmfgna3p" path="res://JUEGO/MyAssets/Personajes/Cenith/Cenith.tscn" id="2_810g4"]
 [ext_resource type="Texture2D" uid="uid://x3jetm31ik5m" path="res://JUEGO/Scenes/Fortaleza/oppcastle-tiles.png" id="3_ecnho"]
 [ext_resource type="Texture2D" uid="uid://3lnk1e5q02m4" path="res://JUEGO/Scenes/Fortaleza/gothic window sprite sheet.png" id="3_rs2xd"]
-[ext_resource type="PackedScene" uid="uid://cksf51rg5c7b1" path="res://JUEGO/Scenes/fire.tscn" id="5_fi75l"]
+[ext_resource type="PackedScene" uid="uid://cksf51rg5c7b1" path="res://JUEGO/Scenes/Fortaleza/fire.tscn" id="5_fi75l"]
 [ext_resource type="PackedScene" uid="uid://6mf2q1vljwpf" path="res://JUEGO/MyAssets/Personajes/esqueleto/esqueleto.tscn" id="6_e64ia"]
 [ext_resource type="Texture2D" uid="uid://bg7bhtlhwq7de" path="res://JUEGO/Scenes/Fortaleza/column.png" id="7_tp3vc"]
 [ext_resource type="PackedScene" uid="uid://drotdgbm3c6gb" path="res://JUEGO/MyAssets/Personajes/Godofredo/Godofredo.tscn" id="9_rs2xd"]
@@ -2627,6 +2627,7 @@ up_direction = Vector2(0, -1)
 
 [node name="Godofredo" parent="." instance=ExtResource("9_rs2xd")]
 position = Vector2(-374, 347)
+up_direction = Vector2(0.707107, -0.707107)
 
 [node name="Column2" type="Sprite2D" parent="."]
 position = Vector2(443, 352)
