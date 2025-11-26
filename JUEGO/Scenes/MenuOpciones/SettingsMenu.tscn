@@ -1,9 +1,13 @@
-[gd_scene format=3 uid="uid://bvktde1c6onah"]
+[gd_scene load_steps=2 format=3 uid="uid://bvktde1c6onah"]
+
+[ext_resource type="Script" uid="uid://bl0vfsnvyu3n5" path="res://JUEGO/Scenes/MenuOpciones/SettingsMenu.gd" id="1_4n267"]
 
 [node name="SettingsMenu" type="Popup"]
 process_mode = 3
+auto_translate_mode = 1
 size = Vector2i(1151, 656)
 visible = true
+script = ExtResource("1_4n267")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15

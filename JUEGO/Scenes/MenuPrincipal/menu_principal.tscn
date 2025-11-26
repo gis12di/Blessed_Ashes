@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://ccwf5br4qulpl"]
+[gd_scene load_steps=8 format=3 uid="uid://ccwf5br4qulpl"]
 
 [ext_resource type="Texture2D" uid="uid://bh4r2l51dfo8i" path="res://JUEGO/MyAssets/Fondos/FondoMenuPrincipal.png" id="1_c7a87"]
 [ext_resource type="Script" uid="uid://c6pfyftyxlsvg" path="res://JUEGO/Scenes/MenuPrincipal/menu_principal.gd" id="1_jobek"]
+[ext_resource type="PackedScene" uid="uid://bvktde1c6onah" path="res://JUEGO/Scenes/MenuOpciones/SettingsMenu.tscn" id="3_60w84"]
+[ext_resource type="PackedScene" uid="uid://1eveo08b30xd" path="res://JUEGO/Scenes/MenuOpciones/FpsLabel.tscn" id="4_m67l7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jobek"]
 bg_color = Color(0.936647, 0.789046, 0.224345, 1)
@@ -79,6 +81,12 @@ theme_override_font_sizes/font_size = 50
 theme_override_styles/hover = SubResource("StyleBoxFlat_p050g")
 theme_override_styles/normal = SubResource("StyleBoxFlat_c7a87")
 text = "SALIR"
+
+[node name="SettingsMenu" parent="." instance=ExtResource("3_60w84")]
+
+[node name="FpsLabel" parent="." instance=ExtResource("4_m67l7")]
+layout_mode = 0
+offset_bottom = 23.0
 
 [connection signal="pressed" from="VBoxContainer/jugar" to="." method="_on_jugar_pressed"]
 [connection signal="pressed" from="VBoxContainer/opciones" to="." method="_on_opciones_pressed"]

@@ -36,6 +36,9 @@ func _ready() -> void:
 	fov_slider.value = Save.game_data.fov
 	mouse_slider.value = Save.game_data.mouse_sens
 	
+	await get_tree().create_timer(0.5).timeout
+	popup_centered()
+	
 	# Actualizar las etiquetas de valores
 	_update_fov_display(Save.game_data.fov)
 	_update_mouse_sens_display(Save.game_data.mouse_sens)
