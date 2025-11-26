@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b8q77vnc0817v"
-path="res://.godot/imported/demon_slime_FREE_v1.0_288x160_spritesheet.png-2b61dab1d4e8f13cbe8e96fa195b9a69.ctex"
+path="res://.godot/imported/demon_slime_FREE_v1.0_288x160_spritesheet.png-a94dc493a433e5222b69a11485c4261d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://JUEGO/spritesheets/demon_slime_FREE_v1.0_288x160_spritesheet.png"
-dest_files=["res://.godot/imported/demon_slime_FREE_v1.0_288x160_spritesheet.png-2b61dab1d4e8f13cbe8e96fa195b9a69.ctex"]
+source_file="res://JUEGO/MyAssets/Personajes/Godofredo/demon_slime_FREE_v1.0_288x160_spritesheet.png"
+dest_files=["res://.godot/imported/demon_slime_FREE_v1.0_288x160_spritesheet.png-a94dc493a433e5222b69a11485c4261d.ctex"]
 
 [params]
 

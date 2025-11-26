@@ -1,7 +1,7 @@
 [gd_scene load_steps=65 format=3 uid="uid://drotdgbm3c6gb"]
 
 [ext_resource type="Script" uid="uid://jubrajwclfdt" path="res://JUEGO/MyAssets/Personajes/Godofredo/godofredo.gd" id="1_yqjl6"]
-[ext_resource type="Texture2D" uid="uid://b8q77vnc0817v" path="res://JUEGO/spritesheets/demon_slime_FREE_v1.0_288x160_spritesheet.png" id="2_a6ivv"]
+[ext_resource type="Texture2D" uid="uid://b8q77vnc0817v" path="res://JUEGO/MyAssets/Personajes/Godofredo/demon_slime_FREE_v1.0_288x160_spritesheet.png" id="2_a6ivv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t1l66"]
 atlas = ExtResource("2_a6ivv")
