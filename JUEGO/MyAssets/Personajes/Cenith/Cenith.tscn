@@ -499,13 +499,6 @@ animation = &"ataque"
 frame = 6
 frame_progress = 0.559073
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(21, -2)
-rotation = 0.00129717
-scale = Vector2(0.5, 0.5)
-zoom = Vector2(4, 4)
-limit_top = 0
-
 [node name="CenithDealDamageZone" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CenithDealDamageZone"]

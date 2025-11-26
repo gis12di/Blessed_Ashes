@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://dktwygg5rsfl6"]
+[gd_scene load_steps=27 format=4 uid="uid://dktwygg5rsfl6"]
 
 [ext_resource type="PackedScene" uid="uid://cpg4jsmfgna3p" path="res://JUEGO/MyAssets/Personajes/Cenith/Cenith.tscn" id="1_6idw4"]
 [ext_resource type="Texture2D" uid="uid://nqt2g8eje5xl" path="res://JUEGO/Scenes/FondoPuente/fondo1.jpg" id="1_yqk44"]
@@ -16,6 +16,7 @@
 [ext_resource type="Script" uid="uid://br7t7annljs6u" path="res://JUEGO/Scenes/Puente/puerta.gd" id="14_y3p1d"]
 [ext_resource type="Script" uid="uid://cmpt3kv7l6mjs" path="res://JUEGO/Scenes/Puente/killzone.gd" id="15_y70mn"]
 [ext_resource type="PackedScene" uid="uid://1eveo08b30xd" path="res://JUEGO/Scenes/MenuOpciones/FpsLabel.tscn" id="16_tagal"]
+[ext_resource type="PackedScene" uid="uid://c5yroomdiufhn" path="res://JUEGO/Scenes/MenuPausa/pausa.tscn" id="17_qvvjl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ymseb"]
 texture = ExtResource("10_lna1f")
@@ -1545,6 +1546,19 @@ tile_set = SubResource("TileSet_y3p1d")
 position = Vector2(54.6949, 104.773)
 max_health = 100
 
+[node name="Camera2D2" type="Camera2D" parent="Cenith"]
+position = Vector2(21, -2)
+rotation = 0.00129717
+scale = Vector2(0.5, 0.5)
+zoom = Vector2(4, 4)
+limit_top = 0
+
+[node name="FpsLabel" parent="Cenith/Camera2D2" instance=ExtResource("16_tagal")]
+offset_left = -285.597
+offset_top = -159.176
+offset_right = -245.597
+offset_bottom = -136.176
+
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 scale = Vector2(1.1, 1.2)
 transform = Transform2D(1.1, 0, 0, 1.2, 0, 0)
@@ -1652,13 +1666,7 @@ script = ExtResource("15_y70mn")
 position = Vector2(813.75, 204)
 shape = SubResource("RectangleShape2D_tagal")
 
-[node name="FpsLabel" parent="." instance=ExtResource("16_tagal")]
-visible = true
-offset_left = -67.0
-offset_top = 24.0
-offset_right = -27.0
-offset_bottom = 47.0
-scale = Vector2(0.5, 0.5)
+[node name="Pausa" parent="." instance=ExtResource("17_qvvjl")]
 
 [connection signal="body_entered" from="Puerta" to="Puerta" method="_on_body_entered"]
 [connection signal="body_entered" from="killzone" to="killzone" method="_on_body_entered"]
