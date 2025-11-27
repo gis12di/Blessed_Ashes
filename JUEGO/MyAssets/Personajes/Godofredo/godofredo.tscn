@@ -442,12 +442,12 @@ radius = 21.0
 height = 70.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1v032"]
-radius = 47.0
-height = 104.0
+radius = 38.0
+height = 100.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vmh8c"]
-radius = 25.0
-height = 70.0
+radius = 30.0
+height = 80.0
 
 [node name="Godofredo" type="CharacterBody2D"]
 up_direction = Vector2(0.707107, -0.707107)
@@ -462,7 +462,7 @@ frame_progress = 0.952665
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, 14)
+position = Vector2(8, 15)
 shape = SubResource("CapsuleShape2D_kbt3g")
 
 [node name="DireccionTimer" type="Timer" parent="."]
@@ -471,14 +471,14 @@ autostart = true
 [node name="godofredoHitbox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="godofredoHitbox"]
-position = Vector2(0, 13)
+position = Vector2(8, 9)
 shape = SubResource("CapsuleShape2D_1v032")
 debug_color = Color(0.7, 0.306023, 0.253668, 0.42)
 
 [node name="godofredoDealDamageArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="godofredoDealDamageArea"]
-position = Vector2(-1, 13)
+position = Vector2(10, 12)
 shape = SubResource("CapsuleShape2D_vmh8c")
 debug_color = Color(0.160032, 0.7, 0.194689, 0.42)
 
