@@ -364,5 +364,5 @@ shape = SubResource("RectangleShape2D_bfgbf")
 
 [connection signal="timeout" from="DireccionTimer" to="." method="_on_direccion_timer_timeout"]
 [connection signal="area_entered" from="nymiraHitbox" to="." method="_on_nymira_hitbox_area_entered"]
-[connection signal="area_entered" from="nymiraDealDamageArea" to="." method="_on_esqueleto_deal_damage_area_area_entered"]
 [connection signal="area_entered" from="nymiraDealDamageArea" to="." method="_on_nymira_deal_damage_area_area_entered"]
+[connection signal="area_entered" from="nymiraDealDamageArea" to="." method="_on_esqueleto_deal_damage_area_area_entered"]

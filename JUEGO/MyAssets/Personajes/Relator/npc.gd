@@ -60,7 +60,7 @@ func show_dialogue():
 		# Mostrar en la UI de diálogo
 		get_tree().call_group("dialogue_ui", "show_dialogue", current_dialogue)
 		
-		# Animación del NPC (opcional)
+		# Mantener la animación "existe" durante el diálogo
 		if animated_sprite_2d.has_animation("existe"):
 			animated_sprite_2d.play("existe")
 	else:
@@ -82,9 +82,9 @@ func end_dialogue():
 	# Ocultar UI de diálogo
 	get_tree().call_group("dialogue_ui", "hide_dialogue")
 	
-	# Volver a animación idle
-	if animated_sprite_2d.has_animation("idle"):
-		animated_sprite_2d.play("idle")
+	# Mantener la animación "existe" (ya que es la única que tienes)
+	if animated_sprite_2d.has_animation("existe"):
+		animated_sprite_2d.play("existe")
 
 func show_interaction_indicator():
 	# Aquí puedes agregar un sprite o efecto que indique que se puede interactuar

@@ -1,7 +1,7 @@
-[gd_scene load_steps=39 format=4 uid="uid://d2ysvfxrwfcn4"]
+[gd_scene load_steps=40 format=4 uid="uid://d2ysvfxrwfcn4"]
 
 [ext_resource type="Texture2D" uid="uid://d1e3dsy1oedon" path="res://JUEGO/Scenes/Bosque/PNG/environment/layers/background.png" id="1_14o4v"]
-[ext_resource type="Script" path="res://JUEGO/Scenes/Bosque/bosque.gd" id="1_14uhb"]
+[ext_resource type="Script" uid="uid://cnqp015r2e3j1" path="res://JUEGO/Scenes/Bosque/bosque.gd" id="1_14uhb"]
 [ext_resource type="Texture2D" uid="uid://7qhfnuknbkrp" path="res://JUEGO/Scenes/Bosque/PNG/environment/layers/middleground.png" id="2_nidul"]
 [ext_resource type="Texture2D" uid="uid://bmxvya8j84osf" path="res://JUEGO/Scenes/Bosque/PNG/environment/layers/tileset.png" id="3_nidul"]
 [ext_resource type="PackedScene" uid="uid://cpg4jsmfgna3p" path="res://JUEGO/MyAssets/Personajes/Cenith/Cenith.tscn" id="4_gvvxv"]
@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://drd3asdtw8vlp" path="res://JUEGO/Scenes/Bosque/animated_portal.gd" id="9_xo61u"]
 [ext_resource type="PackedScene" uid="uid://5kjibbunq016" path="res://JUEGO/MyAssets/Personajes/Goblin/Goblin.tscn" id="10_154l6"]
 [ext_resource type="Texture2D" uid="uid://di1m7607nus5o" path="res://JUEGO/Scenes/Bosque/Dimensional_Portal.png" id="10_xo61u"]
+[ext_resource type="PackedScene" uid="uid://bigbtt02gtdcy" path="res://JUEGO/MyAssets/Personajes/Relator/npc.tscn" id="11_0rpkq"]
 [ext_resource type="PackedScene" uid="uid://p4ypha2q5lse" path="res://JUEGO/MyAssets/Personajes/Corredor/corredor.tscn" id="11_xo61u"]
 [ext_resource type="PackedScene" uid="uid://c5yroomdiufhn" path="res://JUEGO/Scenes/MenuPausa/pausa.tscn" id="12_3dfo7"]
 [ext_resource type="PackedScene" uid="uid://cw8oky04qwmxh" path="res://JUEGO/MyAssets/Personajes/Nymira/Nymira.tscn" id="16_foal7"]
@@ -1086,6 +1087,9 @@ scale = Vector2(1.72159, 1.57925)
 sprite_frames = SubResource("SpriteFrames_foal7")
 script = ExtResource("9_xo61u")
 
+[node name="Npc" parent="." instance=ExtResource("11_0rpkq")]
+position = Vector2(3464, 65)
+
 [node name="Cenith" parent="." instance=ExtResource("4_gvvxv")]
 position = Vector2(16, 260)
 scale = Vector2(1.2, 1.2)
@@ -1162,7 +1166,6 @@ shape = SubResource("RectangleShape2D_3dfo7")
 
 [node name="Nymira" parent="." instance=ExtResource("16_foal7")]
 position = Vector2(3447.54, 625.283)
-up_direction = Vector2(0.707107, -0.707107)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("18_0rpkq")

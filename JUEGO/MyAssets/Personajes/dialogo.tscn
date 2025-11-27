@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlk8ol7x3wl6q"]
+
+[sub_resource type="GDScript" id="GDScript_ess7m"]
+
+[sub_resource type="Gradient" id="Gradient_l8tes"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 0.317647)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_2bjgu"]
+gradient = SubResource("Gradient_l8tes")
+fill_from = Vector2(1, 0)
+fill_to = Vector2(0.582569, 0.417431)
+
+[node name="Dialogo" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = SubResource("GDScript_ess7m")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("GradientTexture2D_2bjgu")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NinePatchRect"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
