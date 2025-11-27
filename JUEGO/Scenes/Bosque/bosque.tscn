@@ -1120,11 +1120,9 @@ shape = SubResource("RectangleShape2D_154l6")
 
 [node name="Hongo" parent="." instance=ExtResource("9_850nv")]
 position = Vector2(653, 254)
-up_direction = Vector2(0.707107, -0.707107)
 
 [node name="Hongo2" parent="." instance=ExtResource("9_850nv")]
 position = Vector2(596, 251)
-up_direction = Vector2(0.707107, -0.707107)
 
 [node name="Goblin" parent="." instance=ExtResource("10_154l6")]
 position = Vector2(2109, 438)

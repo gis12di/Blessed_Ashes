@@ -29,6 +29,16 @@ func _ready():
 	attack_cooldown_timer = Timer.new()
 	attack_cooldown_timer.one_shot = true
 	add_child(attack_cooldown_timer)
+	
+	# 🔥 INICIALIZAR: Asegurar que las variables globales existan
+	_initialize_global_variables()
+
+func _initialize_global_variables():
+	# Inicializar variables globales si no existen
+	if not "nicromanteDamageAmount" in Global:
+		Global.nicromanteDamageAmount = damage_to_deal
+	if not "nicromanteDamageZone" in Global:
+		Global.nicromanteDamageZone = null
 
 func _process(delta):
 	if !is_on_floor():
@@ -40,8 +50,13 @@ func _process(delta):
 	elif !Global.CenithAlive:
 		is_nicromante_chase = false
 		
+	# 🔥 CORREGIDO: Verificar que exista el nodo antes de asignar
+	if has_node("nicromanteDealDamageArea"):
+		Global.nicromanteDamageZone = $nicromanteDealDamageArea
+	else:
+		print("⚠️ Advertencia: nicromanteDealDamageArea no encontrado")
+	
 	Global.nicromanteDamageAmount = damage_to_deal
-	Global.nicromanteDamageZone = $nicromanteDealDamageArea
 	Cenith = Global.playerBody
 	move(delta)
 	handle_animation()
@@ -72,7 +87,6 @@ func handle_animation():
 			anim_sprite.flip_h = false
 	elif !dead and taking_damage and !is_dealing_damage:
 		anim_sprite.play("recibe_golpe")
-		# Cambiar esto también para mayor seguridad
 		start_taking_damage_cooldown()
 	elif dead and is_roaming:
 		is_roaming = false
@@ -111,6 +125,12 @@ func handle_death():
 func drop_health_potion():
 	# Cargar la escena de la poción
 	var health_potion_scene = load("res://JUEGO/MyAssets/Personajes/Cenith/posion/health_potion.tscn")
+	
+	# 🔥 CORREGIDO: Verificar que la escena existe
+	if health_potion_scene == null:
+		print("❌ Error: No se pudo cargar la escena de la poción")
+		return
+	
 	var health_potion = health_potion_scene.instantiate()
 	
 	# Añadir la poción al mismo nivel que el enemigo (el padre del enemigo)
@@ -141,13 +161,13 @@ func take_damage(damage):
 	print(str(self), "current health is ", health)
 
 func _on_nicromante_deal_damage_area_area_entered(area: Area2D) -> void:
-	if area == Global.CenithHitbox:
+	# 🔥 CORREGIDO: Verificación más segura
+	if Global.CenithHitbox and area == Global.CenithHitbox:
 		is_dealing_damage = true
 
 		# APLICAR DAÑO REAL
 		if Global.playerBody and Global.playerBody.has_method("take_damage"):
 			Global.playerBody.take_damage(damage_to_deal)
-
 
 		# COOL DOWN - Versión segura
 		start_attack_cooldown()
@@ -161,6 +181,7 @@ func start_attack_cooldown():
 			is_dealing_damage = false
 
 func _on_nicromante_hitbox_area_entered(area: Area2D) -> void:
-	var damage = Global.CenithDamageAmount
-	if area == Global.CenithDamageZone: 
+	# 🔥 CORREGIDO: Verificación más segura
+	if Global.CenithDamageZone and area == Global.CenithDamageZone:
+		var damage = Global.CenithDamageAmount
 		take_damage(damage)

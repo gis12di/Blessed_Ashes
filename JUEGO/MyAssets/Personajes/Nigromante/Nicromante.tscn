@@ -1,6 +1,6 @@
 [gd_scene load_steps=179 format=3 uid="uid://y7hvc8604vvd"]
 
-[ext_resource type="Script" path="res://JUEGO/MyAssets/Personajes/Nigromante/nicromante.gd" id="1_tychk"]
+[ext_resource type="Script" uid="uid://d224caxjcqie1" path="res://JUEGO/MyAssets/Personajes/Nigromante/nicromante.gd" id="1_tychk"]
 [ext_resource type="Texture2D" uid="uid://b4kqw0bwqwpgb" path="res://JUEGO/MyAssets/Personajes/Nigromante/ataque.png" id="2_slp1j"]
 [ext_resource type="Texture2D" uid="uid://3csxaoflk7ky" path="res://JUEGO/MyAssets/Personajes/Nigromante/caminar.png" id="3_tychk"]
 [ext_resource type="Texture2D" uid="uid://pw5mvcnl53nb" path="res://JUEGO/MyAssets/Personajes/Nigromante/existir.png" id="4_slp1j"]
