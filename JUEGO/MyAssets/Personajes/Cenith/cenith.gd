@@ -123,6 +123,30 @@ func take_damage(amount: int) -> void:
 		Global.CenithAlive = false
 		call_deferred("die")
 
+func heal(amount: int):
+	current_health += amount
+	
+	# Asegurar que no se pase del máximo
+	if current_health > max_health:
+		current_health = max_health
+	
+	# Actualizar barra de vida
+	health_bar.value = current_health
+	
+	print("❤️ Curado: +", amount, " HP | HP actual: ", current_health)
+	
+	# Efecto visual opcional
+	play_heal_effect()
+
+func play_heal_effect():
+	# Efecto visual simple - puedes mejorarlo
+	var original_modulate = $AnimatedSprite2D.modulate
+	$AnimatedSprite2D.modulate = Color.GREEN
+	
+	# Crear tween para restaurar el color
+	var tween = create_tween()
+	tween.tween_property($AnimatedSprite2D, "modulate", original_modulate, 0.5)
+
 func die():
 	print("💀 Jugador muerto")
 	get_tree().call_deferred("reload_current_scene")

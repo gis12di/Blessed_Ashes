@@ -482,7 +482,7 @@ height = 26.0
 radius = 8.0
 height = 26.0
 
-[node name="Cenith" type="CharacterBody2D"]
+[node name="Cenith" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_8exod")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

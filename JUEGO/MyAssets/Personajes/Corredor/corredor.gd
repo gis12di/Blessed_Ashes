@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 class_name corredor
 
-const speed = 50
+const speed = 80
 var is_corredor_chase: bool = true
 
 var health = 200
@@ -102,7 +102,24 @@ func _on_death_timer_finished():
 		handle_death()
 
 func handle_death():
+	# 50% de probabilidad de soltar poción
+	if randf() < 0.5:
+		drop_health_potion()
+	
 	self.queue_free()
+
+func drop_health_potion():
+	# Cargar la escena de la poción
+	var health_potion_scene = load("res://JUEGO/MyAssets/Personajes/Cenith/posion/health_potion.tscn")
+	var health_potion = health_potion_scene.instantiate()
+	
+	# Añadir la poción al mismo nivel que el enemigo (el padre del enemigo)
+	get_parent().add_child(health_potion)
+	
+	# Posicionar la poción donde murió el enemigo
+	health_potion.global_position = global_position
+	
+	print("🎁 Poción soltada!")
 
 func _on_direccion_timer_timeout():
 	$DireccionTimer.wait_time = choose([1.5,2.0,2.5])

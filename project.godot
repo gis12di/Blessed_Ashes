@@ -21,6 +21,10 @@ Global="*res://JUEGO/MyAssets/global.gd"
 GlobalSettings="*res://GlobalSettings.gd"
 Save="*res://save.gd"
 
+[global_group]
+
+player=""
+
 [input]
 
 interactuar={
