@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=4 uid="uid://d2ysvfxrwfcn4"]
+[gd_scene load_steps=40 format=4 uid="uid://d2ysvfxrwfcn4"]
 
 [ext_resource type="Texture2D" uid="uid://d1e3dsy1oedon" path="res://JUEGO/Scenes/Bosque/PNG/environment/layers/background.png" id="1_14o4v"]
 [ext_resource type="Script" uid="uid://cnqp015r2e3j1" path="res://JUEGO/Scenes/Bosque/bosque.gd" id="1_14uhb"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://c5yroomdiufhn" path="res://JUEGO/Scenes/MenuPausa/pausa.tscn" id="12_3dfo7"]
 [ext_resource type="PackedScene" uid="uid://cw8oky04qwmxh" path="res://JUEGO/MyAssets/Personajes/Nymira/Nymira.tscn" id="16_foal7"]
 [ext_resource type="AudioStream" uid="uid://78mdmlws2nx1" path="res://JUEGO/sound/enchanted_forest_loop.ogg" id="18_0rpkq"]
+[ext_resource type="PackedScene" uid="uid://bigbtt02gtdcy" path="res://JUEGO/MyAssets/Personajes/Relator/npc.tscn" id="18_hbktd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gvvxv"]
 texture = ExtResource("3_nidul")
@@ -1087,7 +1088,7 @@ sprite_frames = SubResource("SpriteFrames_foal7")
 script = ExtResource("9_xo61u")
 
 [node name="Cenith" parent="." instance=ExtResource("4_gvvxv")]
-position = Vector2(2998, 584)
+position = Vector2(3393, 74)
 scale = Vector2(1.2, 1.2)
 
 [node name="Camera2D2" type="Camera2D" parent="Cenith"]
@@ -1162,6 +1163,9 @@ shape = SubResource("RectangleShape2D_3dfo7")
 
 [node name="Nymira" parent="." instance=ExtResource("16_foal7")]
 position = Vector2(3447.54, 625.283)
+
+[node name="Npc" parent="." instance=ExtResource("18_hbktd")]
+position = Vector2(3452, 61)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("18_0rpkq")
