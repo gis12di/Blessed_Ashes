@@ -1099,7 +1099,52 @@ script = ExtResource("8_kkfd7")
 position = Vector2(2767.3, 585.094)
 shape = SubResource("RectangleShape2D_154l6")
 
+<<<<<<< Updated upstream
 [connection signal="body_entered" from="Portal" to="Portal" method="_on_body_entered"]
+=======
+[node name="Hongo" parent="." instance=ExtResource("9_850nv")]
+position = Vector2(653, 254)
+up_direction = Vector2(0.707107, -0.707107)
+
+[node name="Hongo2" parent="." instance=ExtResource("9_850nv")]
+position = Vector2(596, 251)
+up_direction = Vector2(0.707107, -0.707107)
+
+[node name="Goblin" parent="." instance=ExtResource("10_154l6")]
+position = Vector2(2109, 438)
+scale = Vector2(0.8, 0.8)
+up_direction = Vector2(0.707107, -0.707107)
+
+[node name="Goblin2" parent="." instance=ExtResource("10_154l6")]
+position = Vector2(2249, 436)
+scale = Vector2(0.8, 0.8)
+up_direction = Vector2(0.707107, -0.707107)
+
+[node name="Goblin3" parent="." instance=ExtResource("10_154l6")]
+position = Vector2(2420, 435)
+scale = Vector2(0.8, 0.8)
+up_direction = Vector2(0.707107, -0.707107)
+
+[node name="Goblin4" parent="." instance=ExtResource("10_154l6")]
+position = Vector2(2528, 436)
+scale = Vector2(0.8, 0.8)
+up_direction = Vector2(0.707107, -0.707107)
+
+[node name="Corredor" parent="." instance=ExtResource("11_xo61u")]
+position = Vector2(2921, 116)
+scale = Vector2(2, 2)
+up_direction = Vector2(0.707107, -0.707107)
+
+[node name="Pausa" parent="." instance=ExtResource("12_3dfo7")]
+
+[node name="killzone4" type="Area2D" parent="."]
+script = ExtResource("8_kkfd7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone4"]
+position = Vector2(895, 372)
+shape = SubResource("RectangleShape2D_3dfo7")
+
+>>>>>>> Stashed changes
 [connection signal="body_entered" from="killzone" to="killzone" method="_on_body_entered"]
 [connection signal="body_entered" from="killzone2" to="killzone2" method="_on_body_entered"]
 [connection signal="body_entered" from="killzone3" to="killzone3" method="_on_body_entered"]
