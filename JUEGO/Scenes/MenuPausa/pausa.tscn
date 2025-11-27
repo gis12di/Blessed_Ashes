@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c5yroomdiufhn"]
+[gd_scene load_steps=3 format=3 uid="uid://c5yroomdiufhn"]
 
 [ext_resource type="Script" uid="uid://dalodvkvf2xo4" path="res://JUEGO/Scenes/MenuPausa/pausa.gd" id="1_ivicf"]
+[ext_resource type="PackedScene" uid="uid://bvktde1c6onah" path="res://JUEGO/Scenes/MenuOpciones/SettingsMenu.tscn" id="2_7lk4q"]
 
 [node name="Pausa" type="CanvasLayer"]
 process_mode = 3
@@ -29,3 +30,32 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 40
 text = "Pausa"
 horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.5
+offset_top = -50.0
+offset_right = 76.5
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Renaudar" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Renaudar"
+
+[node name="Opciones" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Opciones"
+
+[node name="MenuPrincipal" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Menu Principal"
+
+[node name="SettingsMenu" parent="." instance=ExtResource("2_7lk4q")]
+visible = false

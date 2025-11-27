@@ -83,6 +83,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_c7a87")
 text = "SALIR"
 
 [node name="SettingsMenu" parent="." instance=ExtResource("3_60w84")]
+visible = false
 
 [node name="FpsLabel" parent="." instance=ExtResource("4_m67l7")]
 layout_mode = 0

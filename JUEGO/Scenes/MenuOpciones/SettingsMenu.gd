@@ -53,9 +53,16 @@ func _setup_display_options():
 	if not display_options.item_selected.is_connected(_on_BtnDisplay_item_selected):
 		display_options.item_selected.connect(_on_BtnDisplay_item_selected)
 
+# 🔥 NUEVA FUNCIÓN: Cambiar entre pantalla completa y ventana
 func _on_BtnDisplay_item_selected(index: int) -> void:
-	GlobalSettings.change_displayMode(index == 1)
+	var fullscreen = (index == 1)
+	GlobalSettings.change_displayMode(fullscreen)
+	
+	# Guardar la preferencia
+	Save.game_data.full_screen_on = fullscreen
+	Save.save_data()
 
+# Las demás funciones permanecen igual...
 func _on_BtnVsync_toggled(button_pressed: bool) -> void:
 	GlobalSettings.change_vsync(button_pressed)
 
