@@ -1,7 +1,7 @@
 [gd_scene load_steps=28 format=4 uid="uid://dktwygg5rsfl6"]
 
 [ext_resource type="PackedScene" uid="uid://cpg4jsmfgna3p" path="res://JUEGO/MyAssets/Personajes/Cenith/Cenith.tscn" id="1_6idw4"]
-[ext_resource type="Script" path="res://JUEGO/Scenes/Puente/puente_fortaleza.gd" id="1_dygjr"]
+[ext_resource type="Script" uid="uid://bwuwhp7mntvcj" path="res://JUEGO/Scenes/Puente/puente_fortaleza.gd" id="1_dygjr"]
 [ext_resource type="Texture2D" uid="uid://nqt2g8eje5xl" path="res://JUEGO/Scenes/FondoPuente/fondo1.jpg" id="1_yqk44"]
 [ext_resource type="Texture2D" uid="uid://btf6e8puxrqul" path="res://JUEGO/Scenes/FondoPuente/fondo2.png" id="2_vsqn7"]
 [ext_resource type="Texture2D" uid="uid://w2scu5dv0vuu" path="res://JUEGO/Scenes/Fortaleza/oppcastle-mod-tiles.png" id="2_ymseb"]
