@@ -1,7 +1,7 @@
 [gd_scene load_steps=22 format=4 uid="uid://qgyb3e8tbqfa"]
 
 [ext_resource type="Texture2D" uid="uid://duvtbw85c1ljg" path="res://JUEGO/Scenes/Fortaleza/Assets.png" id="1_ecnho"]
-[ext_resource type="Script" uid="uid://b1akm543o5hs7" path="res://JUEGO/Scenes/Fortaleza/fortaleza.gd" id="1_p0s8d"]
+[ext_resource type="Script" path="res://JUEGO/Scenes/Fortaleza/fortaleza.gd" id="1_p0s8d"]
 [ext_resource type="Texture2D" uid="uid://dsrt2rjslqqw" path="res://JUEGO/Scenes/Fortaleza/backgrounds.png" id="2_5vefc"]
 [ext_resource type="Texture2D" uid="uid://w2scu5dv0vuu" path="res://JUEGO/Scenes/Fortaleza/oppcastle-mod-tiles.png" id="2_53efs"]
 [ext_resource type="PackedScene" uid="uid://cpg4jsmfgna3p" path="res://JUEGO/MyAssets/Personajes/Cenith/Cenith.tscn" id="2_810g4"]
