@@ -5,13 +5,13 @@ class_name goblin
 const speed = 20
 var is_goblin_chase: bool = true
 
-var health = 100
-var health_max = 100
+var health = 60
+var health_max = 60
 var hearlt_min = 0
 
 var dead : bool = false
 var taking_damage : bool = false
-var damage_to_deal = 10
+var damage_to_deal = 5
 var is_dealing_damage : bool = false
 
 var dir : Vector2

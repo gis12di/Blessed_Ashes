@@ -232,7 +232,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kbt3g"]
-height = 52.0
+height = 42.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_22te4"]
 
@@ -250,7 +250,7 @@ frame_progress = 0.494951
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, 14)
+position = Vector2(0, 7)
 shape = SubResource("CapsuleShape2D_kbt3g")
 
 [node name="DireccionTimer" type="Timer" parent="."]

@@ -2,11 +2,11 @@ extends CharacterBody2D
 
 class_name corredor
 
-const speed = 20
+const speed = 50
 var is_corredor_chase: bool = true
 
-var health = 100
-var health_max = 100
+var health = 200
+var health_max = 200
 var hearlt_min = 0
 
 var dead : bool = false

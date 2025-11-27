@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 class_name hongo
 
-const speed = 20
+const speed = 40
 var is_hongo_chase: bool = true
 
 var health = 100
@@ -15,7 +15,7 @@ var damage_to_deal = 10
 var is_dealing_damage : bool = false
 
 var dir : Vector2
-const gravity = 900
+const gravity = 1200
 var knockback_force = -20
 var is_roaming : bool = true
 var Cenith: CharacterBody2D

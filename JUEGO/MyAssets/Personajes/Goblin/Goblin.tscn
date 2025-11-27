@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://bx0wdu5nsa1h0"]
+[gd_scene load_steps=39 format=3 uid="uid://5kjibbunq016"]
 
 [ext_resource type="Script" uid="uid://djloi5vckm325" path="res://JUEGO/MyAssets/Personajes/Goblin/goblin.gd" id="1_m2db3"]
 [ext_resource type="Texture2D" uid="uid://fkevw15kv2ni" path="res://JUEGO/MyAssets/Personajes/Goblin/Attack.png" id="2_in6e7"]
@@ -232,11 +232,15 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kbt3g"]
-height = 38.0
+height = 36.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_low5g"]
+radius = 9.0
+height = 38.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vhm1s"]
+radius = 15.0
+height = 34.0
 
 [node name="Goblin" type="CharacterBody2D"]
 up_direction = Vector2(0.707107, -0.707107)
@@ -249,7 +253,7 @@ frame_progress = 0.125927
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, 11)
+position = Vector2(-1, 8)
 shape = SubResource("CapsuleShape2D_kbt3g")
 
 [node name="DireccionTimer" type="Timer" parent="."]

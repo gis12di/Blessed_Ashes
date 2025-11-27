@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://chk7b76amts7h"]
+[gd_scene load_steps=62 format=3 uid="uid://p4ypha2q5lse"]
 
 [ext_resource type="Script" uid="uid://1hvxaqkxkg4b" path="res://JUEGO/MyAssets/Personajes/Corredor/corredor.gd" id="1_6k3pi"]
 [ext_resource type="Texture2D" uid="uid://tnvfpfparwcm" path="res://JUEGO/MyAssets/Personajes/Corredor/NightBorne.png" id="2_6k3pi"]
@@ -422,6 +422,7 @@ height = 32.0
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6k3pi"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e13yg"]
+radius = 13.0
 
 [node name="Corredor" type="CharacterBody2D"]
 up_direction = Vector2(0.707107, -0.707107)
