@@ -1,46 +1,47 @@
-[gd_scene load_steps=36 format=3 uid="uid://cw8oky04qwmxh"]
+[gd_scene load_steps=52 format=3 uid="uid://cw8oky04qwmxh"]
 
-[ext_resource type="Script" uid="uid://dka3riuopaq1u" path="res://JUEGO/MyAssets/Personajes/esqueleto/esqueleto.gd" id="1_5sa2s"]
-[ext_resource type="Texture2D" uid="uid://bel5jjxeqwcoy" path="res://JUEGO/MyAssets/Personajes/Nymira/Blue_witch/B_witch_attack.png" id="2_qgyml"]
+[ext_resource type="Script" uid="uid://dyf4xepsqxddk" path="res://JUEGO/MyAssets/Personajes/Nymira/nymira.gd" id="1_qgyml"]
+[ext_resource type="Texture2D" uid="uid://cbsofn1l3eofr" path="res://JUEGO/MyAssets/Personajes/Nymira/Blue_witch/AtaqueBruja.png" id="2_ij6mp"]
 [ext_resource type="Texture2D" uid="uid://b0ooh1nek7f0x" path="res://JUEGO/MyAssets/Personajes/Nymira/Blue_witch/B_witch_run.png" id="3_ij6mp"]
 [ext_resource type="Texture2D" uid="uid://cq4lhta8sru8f" path="res://JUEGO/MyAssets/Personajes/Nymira/Blue_witch/B_witch_idle.png" id="4_25vas"]
 [ext_resource type="Texture2D" uid="uid://dvs1p3jh0m1h7" path="res://JUEGO/MyAssets/Personajes/Nymira/Blue_witch/B_witch_take_damage.png" id="5_016qe"]
+[ext_resource type="Texture2D" uid="uid://43nvdgp8jyvr" path="res://JUEGO/MyAssets/Personajes/Nymira/Blue_witch/MuricionBruja.png" id="5_25vas"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_016qe"]
+atlas = ExtResource("2_ij6mp")
+region = Rect2(0, 0, 170, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vh8ni"]
-atlas = ExtResource("2_qgyml")
-region = Rect2(0, 0, 104, 46)
+atlas = ExtResource("2_ij6mp")
+region = Rect2(170, 0, 170, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_amkc7"]
-atlas = ExtResource("2_qgyml")
-region = Rect2(0, 46, 104, 46)
+atlas = ExtResource("2_ij6mp")
+region = Rect2(340, 0, 170, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q80r8"]
-atlas = ExtResource("2_qgyml")
-region = Rect2(0, 92, 104, 46)
+atlas = ExtResource("2_ij6mp")
+region = Rect2(510, 0, 170, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gg0ai"]
-atlas = ExtResource("2_qgyml")
-region = Rect2(0, 138, 104, 46)
+atlas = ExtResource("2_ij6mp")
+region = Rect2(680, 0, 170, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h7vx1"]
-atlas = ExtResource("2_qgyml")
-region = Rect2(0, 184, 104, 46)
+atlas = ExtResource("2_ij6mp")
+region = Rect2(850, 0, 170, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_anhsl"]
-atlas = ExtResource("2_qgyml")
-region = Rect2(0, 230, 104, 46)
+atlas = ExtResource("2_ij6mp")
+region = Rect2(1020, 0, 170, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_my8f2"]
-atlas = ExtResource("2_qgyml")
-region = Rect2(0, 276, 104, 46)
+atlas = ExtResource("2_ij6mp")
+region = Rect2(1190, 0, 170, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sjn5s"]
-atlas = ExtResource("2_qgyml")
-region = Rect2(0, 322, 104, 46)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_70sff"]
-atlas = ExtResource("2_qgyml")
-region = Rect2(0, 368, 104, 46)
+atlas = ExtResource("2_ij6mp")
+region = Rect2(1360, 0, 170, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tt15d"]
 atlas = ExtResource("3_ij6mp")
@@ -98,6 +99,66 @@ region = Rect2(0, 192, 32, 48)
 atlas = ExtResource("4_25vas")
 region = Rect2(0, 240, 32, 48)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_70sff"]
+atlas = ExtResource("5_25vas")
+region = Rect2(0, 0, 52, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lwerb"]
+atlas = ExtResource("5_25vas")
+region = Rect2(52, 0, 52, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kjdbx"]
+atlas = ExtResource("5_25vas")
+region = Rect2(104, 0, 52, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fh4tl"]
+atlas = ExtResource("5_25vas")
+region = Rect2(156, 0, 52, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o711w"]
+atlas = ExtResource("5_25vas")
+region = Rect2(208, 0, 52, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_byxhn"]
+atlas = ExtResource("5_25vas")
+region = Rect2(260, 0, 52, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u6pcp"]
+atlas = ExtResource("5_25vas")
+region = Rect2(312, 0, 52, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qf4tq"]
+atlas = ExtResource("5_25vas")
+region = Rect2(364, 0, 52, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jidly"]
+atlas = ExtResource("5_25vas")
+region = Rect2(416, 0, 52, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qoiso"]
+atlas = ExtResource("5_25vas")
+region = Rect2(468, 0, 52, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pshs2"]
+atlas = ExtResource("5_25vas")
+region = Rect2(520, 0, 52, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y3ook"]
+atlas = ExtResource("5_25vas")
+region = Rect2(572, 0, 52, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a2od7"]
+atlas = ExtResource("5_25vas")
+region = Rect2(624, 0, 52, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0umc5"]
+atlas = ExtResource("5_25vas")
+region = Rect2(676, 0, 52, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h16aj"]
+atlas = ExtResource("5_25vas")
+region = Rect2(728, 0, 52, 48)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_4mst6"]
 atlas = ExtResource("5_016qe")
 region = Rect2(0, 0, 32, 48)
@@ -113,6 +174,9 @@ region = Rect2(0, 96, 32, 48)
 [sub_resource type="SpriteFrames" id="SpriteFrames_md0t1"]
 animations = [{
 "frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_016qe")
+}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_vh8ni")
 }, {
@@ -136,9 +200,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_sjn5s")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_70sff")
 }],
 "loop": true,
 "name": &"ataque",
@@ -196,7 +257,52 @@ animations = [{
 "name": &"existe",
 "speed": 8.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_70sff")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lwerb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kjdbx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fh4tl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o711w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_byxhn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u6pcp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qf4tq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jidly")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qoiso")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pshs2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y3ook")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a2od7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0umc5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h16aj")
+}],
 "loop": true,
 "name": &"muerte",
 "speed": 7.0
@@ -221,17 +327,16 @@ radius = 8.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_22te4"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_5ne4l"]
-radius = 13.4164
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bfgbf"]
+size = Vector2(62, 20)
 
-[node name="Esqueleto" type="CharacterBody2D"]
+[node name="Nymira" type="CharacterBody2D"]
 up_direction = Vector2(0.707107, -0.707107)
-script = ExtResource("1_5sa2s")
+script = ExtResource("1_qgyml")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_md0t1")
-animation = &"ataque"
-frame_progress = 0.191985
+animation = &"existe"
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -241,19 +346,23 @@ shape = SubResource("CapsuleShape2D_kbt3g")
 [node name="DireccionTimer" type="Timer" parent="."]
 autostart = true
 
-[node name="esqueletoHitbox" type="Area2D" parent="."]
+[node name="nymiraHitbox" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="esqueletoHitbox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="nymiraHitbox"]
 position = Vector2(1, 0)
 shape = SubResource("CircleShape2D_22te4")
 
-[node name="esqueletoDealDamageArea" type="Area2D" parent="."]
-visible = false
+[node name="nymiraDealDamageArea" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="esqueletoDealDamageArea"]
-position = Vector2(-1, 11)
-shape = SubResource("CircleShape2D_5ne4l")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="nymiraDealDamageArea"]
+position = Vector2(-48, 10)
+shape = SubResource("RectangleShape2D_bfgbf")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="nymiraDealDamageArea"]
+position = Vector2(49, 11)
+shape = SubResource("RectangleShape2D_bfgbf")
 
 [connection signal="timeout" from="DireccionTimer" to="." method="_on_direccion_timer_timeout"]
-[connection signal="area_entered" from="esqueletoHitbox" to="." method="_on_esqueleto_hitbox_area_entered"]
-[connection signal="area_entered" from="esqueletoDealDamageArea" to="." method="_on_esqueleto_deal_damage_area_area_entered"]
+[connection signal="area_entered" from="nymiraHitbox" to="." method="_on_nymira_hitbox_area_entered"]
+[connection signal="area_entered" from="nymiraDealDamageArea" to="." method="_on_esqueleto_deal_damage_area_area_entered"]
+[connection signal="area_entered" from="nymiraDealDamageArea" to="." method="_on_nymira_deal_damage_area_area_entered"]

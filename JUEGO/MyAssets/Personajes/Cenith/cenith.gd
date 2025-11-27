@@ -97,7 +97,14 @@ func check_hitbox():
 	
 	elif hitbox.get_parent() is corredor:
 		damage = Global.corredorDamageAmount
-
+		
+	elif hitbox.get_parent() is nymira:
+		damage = Global.nymiraDamageAmount
+	
+	elif hitbox.get_parent() is nicromante:
+		damage = Global.nicromanteDamageAmount
+	#hola
+		
 	if damage > 0 and can_take_damage:                
 		can_take_damage = false
 		take_damage(damage)
