@@ -249,7 +249,7 @@ script = ExtResource("1_m2db3")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_md0t1")
 animation = &"existe"
-frame_progress = 0.125927
+frame_progress = 0.336452
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

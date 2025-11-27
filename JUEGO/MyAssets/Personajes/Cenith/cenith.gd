@@ -44,7 +44,7 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite2D.play("Salto")
 
 	# Movimiento horizontal
-	var direction := Input.get_axis("ui_left", "ui_right")
+	var direction := Input.get_axis("Izquierda", "Derecha") 
 
 	if direction > 0:
 		$AnimatedSprite2D.flip_h = false
