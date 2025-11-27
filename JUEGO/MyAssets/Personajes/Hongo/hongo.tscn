@@ -246,7 +246,7 @@ script = ExtResource("1_dh1e2")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_md0t1")
 animation = &"recibe_golpe"
-frame_progress = 0.874668
+frame_progress = 0.494951
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -270,6 +270,4 @@ shape = SubResource("CircleShape2D_5ne4l")
 
 [connection signal="timeout" from="DireccionTimer" to="." method="_on_direccion_timer_timeout"]
 [connection signal="area_entered" from="hongoHitbox" to="." method="_on_hongo_hitbox_area_entered"]
-[connection signal="area_entered" from="hongoHitbox" to="." method="_on_esqueleto_hitbox_area_entered"]
 [connection signal="area_entered" from="hongoDealDamageArea" to="." method="_on_hongo_deal_damage_area_area_entered"]
-[connection signal="area_entered" from="hongoDealDamageArea" to="." method="_on_esqueleto_deal_damage_area_area_entered"]
