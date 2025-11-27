@@ -99,6 +99,7 @@ animation = &"existe"
 frame_progress = 0.44909
 
 [node name="Dialogo" parent="AnimatedSprite2D" instance=ExtResource("3_aaqil")]
+visible = false
 offset_left = -23.0
 offset_top = -28.0
 offset_right = -23.0

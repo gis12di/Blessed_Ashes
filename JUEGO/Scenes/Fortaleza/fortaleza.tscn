@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://drotdgbm3c6gb" path="res://JUEGO/MyAssets/Personajes/Godofredo/godofredo.tscn" id="9_rs2xd"]
 [ext_resource type="PackedScene" uid="uid://c5yroomdiufhn" path="res://JUEGO/Scenes/MenuPausa/pausa.tscn" id="12_cqhg3"]
 [ext_resource type="AudioStream" uid="uid://dtk7gd7gbegs3" path="res://JUEGO/sound/puente.ogg" id="13_aircb"]
-[ext_resource type="Script" uid="uid://8r1wmkk2ikig" path="res://JUEGO/Scenes/Fortaleza/brasero.gd" id="15_8c26i"]
+[ext_resource type="Script" uid="uid://vu45yuc151mo" path="res://JUEGO/Scenes/Fortaleza/brasero.gd" id="15_8c26i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tp3vc"]
 texture = ExtResource("1_ecnho")
@@ -2845,8 +2845,8 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_fi75l")
 sources/1 = SubResource("TileSetAtlasSource_e64ia")
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_3d1w0"]
-radius = 24.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_aircb"]
+radius = 11.3952
 
 [node name="Fortaleza" type="Node2D"]
 script = ExtResource("1_p0s8d")
@@ -2866,7 +2866,7 @@ tile_map_data = PackedByteArray("AAADAAcAAAAHAAEAAAADAAgAAAAHAAIAAAADAAkAAAAHAAM
 tile_set = SubResource("TileSet_tp3vc")
 
 [node name="Cenith" parent="." instance=ExtResource("2_810g4")]
-position = Vector2(-524, 345)
+position = Vector2(133.737, 105.49)
 
 [node name="Camera2D" type="Camera2D" parent="Cenith"]
 position = Vector2(21, -2)
@@ -2970,7 +2970,8 @@ script = ExtResource("15_8c26i")
 next_scene_path = "res://JUEGO/Scenes/Creditos/creditos.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Brasero"]
-position = Vector2(-560, 351)
-shape = SubResource("CircleShape2D_3d1w0")
+position = Vector2(-561, 352)
+rotation = -0.0543876
+shape = SubResource("CircleShape2D_aircb")
 
-[connection signal="body_entered" from="Brasero" to="." method="_on_brasero_body_entered"]
+[connection signal="body_entered" from="Brasero" to="Brasero" method="_on_body_entered"]
