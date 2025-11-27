@@ -1,11 +1,10 @@
-[gd_scene load_steps=24 format=4 uid="uid://qgyb3e8tbqfa"]
+[gd_scene load_steps=25 format=4 uid="uid://qgyb3e8tbqfa"]
 
 [ext_resource type="Texture2D" uid="uid://duvtbw85c1ljg" path="res://JUEGO/Scenes/Fortaleza/Assets.png" id="1_ecnho"]
 [ext_resource type="Script" uid="uid://b1akm543o5hs7" path="res://JUEGO/Scenes/Fortaleza/fortaleza.gd" id="1_p0s8d"]
 [ext_resource type="Texture2D" uid="uid://dsrt2rjslqqw" path="res://JUEGO/Scenes/Fortaleza/backgrounds.png" id="2_5vefc"]
 [ext_resource type="Texture2D" uid="uid://w2scu5dv0vuu" path="res://JUEGO/Scenes/Fortaleza/oppcastle-mod-tiles.png" id="2_53efs"]
 [ext_resource type="PackedScene" uid="uid://cpg4jsmfgna3p" path="res://JUEGO/MyAssets/Personajes/Cenith/Cenith.tscn" id="2_810g4"]
-[ext_resource type="PackedScene" uid="uid://y7hvc8604vvd" path="res://JUEGO/MyAssets/Personajes/Nigromante/Nicromante.tscn" id="3_aircb"]
 [ext_resource type="Texture2D" uid="uid://x3jetm31ik5m" path="res://JUEGO/Scenes/Fortaleza/oppcastle-tiles.png" id="3_ecnho"]
 [ext_resource type="Texture2D" uid="uid://3lnk1e5q02m4" path="res://JUEGO/Scenes/Fortaleza/gothic window sprite sheet.png" id="3_rs2xd"]
 [ext_resource type="PackedScene" uid="uid://cksf51rg5c7b1" path="res://JUEGO/Scenes/Fortaleza/fire.tscn" id="5_fi75l"]
@@ -14,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://drotdgbm3c6gb" path="res://JUEGO/MyAssets/Personajes/Godofredo/godofredo.tscn" id="9_rs2xd"]
 [ext_resource type="PackedScene" uid="uid://c5yroomdiufhn" path="res://JUEGO/Scenes/MenuPausa/pausa.tscn" id="12_cqhg3"]
 [ext_resource type="AudioStream" uid="uid://dtk7gd7gbegs3" path="res://JUEGO/sound/puente.ogg" id="13_aircb"]
+[ext_resource type="Script" uid="uid://8r1wmkk2ikig" path="res://JUEGO/Scenes/Fortaleza/brasero.gd" id="15_8c26i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tp3vc"]
 texture = ExtResource("1_ecnho")
@@ -2845,6 +2845,9 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_fi75l")
 sources/1 = SubResource("TileSetAtlasSource_e64ia")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_3d1w0"]
+radius = 24.0
+
 [node name="Fortaleza" type="Node2D"]
 script = ExtResource("1_p0s8d")
 metadata/_edit_horizontal_guides_ = [181.0]
@@ -2863,7 +2866,7 @@ tile_map_data = PackedByteArray("AAADAAcAAAAHAAEAAAADAAgAAAAHAAIAAAADAAkAAAAHAAM
 tile_set = SubResource("TileSet_tp3vc")
 
 [node name="Cenith" parent="." instance=ExtResource("2_810g4")]
-position = Vector2(54.6949, 104.773)
+position = Vector2(-524, 345)
 
 [node name="Camera2D" type="Camera2D" parent="Cenith"]
 position = Vector2(21, -2)
@@ -2962,7 +2965,12 @@ texture = ExtResource("7_tp3vc")
 stream = ExtResource("13_aircb")
 volume_db = -26.234
 
-[node name="Nicromante" parent="." instance=ExtResource("3_aircb")]
-position = Vector2(1658, 262)
-scale = Vector2(2, 2)
-up_direction = Vector2(0.707107, -0.707107)
+[node name="Brasero" type="Area2D" parent="."]
+script = ExtResource("15_8c26i")
+next_scene_path = "res://JUEGO/Scenes/Creditos/creditos.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Brasero"]
+position = Vector2(-560, 351)
+shape = SubResource("CircleShape2D_3d1w0")
+
+[connection signal="body_entered" from="Brasero" to="." method="_on_brasero_body_entered"]
