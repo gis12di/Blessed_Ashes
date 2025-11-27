@@ -1,6 +1,6 @@
-[gd_scene load_steps=179 format=3 uid="uid://bnxa50ryfadfy"]
+[gd_scene load_steps=179 format=3 uid="uid://y7hvc8604vvd"]
 
-[ext_resource type="Script" uid="uid://d224caxjcqie1" path="res://JUEGO/MyAssets/Personajes/Nigromante/nicromante.gd" id="1_tychk"]
+[ext_resource type="Script" path="res://JUEGO/MyAssets/Personajes/Nigromante/nicromante.gd" id="1_tychk"]
 [ext_resource type="Texture2D" uid="uid://b4kqw0bwqwpgb" path="res://JUEGO/MyAssets/Personajes/Nigromante/ataque.png" id="2_slp1j"]
 [ext_resource type="Texture2D" uid="uid://3csxaoflk7ky" path="res://JUEGO/MyAssets/Personajes/Nigromante/caminar.png" id="3_tychk"]
 [ext_resource type="Texture2D" uid="uid://pw5mvcnl53nb" path="res://JUEGO/MyAssets/Personajes/Nigromante/existir.png" id="4_slp1j"]
@@ -1213,13 +1213,13 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kbt3g"]
 radius = 11.0
-height = 40.0
+height = 36.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_22te4"]
 radius = 12.0416
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5ne4l"]
-radius = 13.4164
+radius = 15.0
 
 [node name="Nicromante" type="CharacterBody2D"]
 up_direction = Vector2(0.707107, -0.707107)
