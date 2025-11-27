@@ -232,7 +232,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kbt3g"]
-height = 42.0
+height = 38.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_22te4"]
 
@@ -259,12 +259,14 @@ autostart = true
 [node name="hongoHitbox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hongoHitbox"]
+visible = false
 position = Vector2(-1, 11)
 shape = SubResource("CircleShape2D_22te4")
 
 [node name="hongoDealDamageArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hongoDealDamageArea"]
+visible = false
 position = Vector2(-1, 11)
 shape = SubResource("CircleShape2D_5ne4l")
 
