@@ -1,6 +1,7 @@
-[gd_scene load_steps=20 format=4 uid="uid://qgyb3e8tbqfa"]
+[gd_scene load_steps=22 format=4 uid="uid://qgyb3e8tbqfa"]
 
 [ext_resource type="Texture2D" uid="uid://duvtbw85c1ljg" path="res://JUEGO/Scenes/Fortaleza/Assets.png" id="1_ecnho"]
+[ext_resource type="Script" uid="uid://b1akm543o5hs7" path="res://JUEGO/Scenes/Fortaleza/fortaleza.gd" id="1_p0s8d"]
 [ext_resource type="Texture2D" uid="uid://dsrt2rjslqqw" path="res://JUEGO/Scenes/Fortaleza/backgrounds.png" id="2_5vefc"]
 [ext_resource type="Texture2D" uid="uid://w2scu5dv0vuu" path="res://JUEGO/Scenes/Fortaleza/oppcastle-mod-tiles.png" id="2_53efs"]
 [ext_resource type="PackedScene" uid="uid://cpg4jsmfgna3p" path="res://JUEGO/MyAssets/Personajes/Cenith/Cenith.tscn" id="2_810g4"]
@@ -11,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://bg7bhtlhwq7de" path="res://JUEGO/Scenes/Fortaleza/column.png" id="7_tp3vc"]
 [ext_resource type="PackedScene" uid="uid://drotdgbm3c6gb" path="res://JUEGO/MyAssets/Personajes/Godofredo/godofredo.tscn" id="9_rs2xd"]
 [ext_resource type="PackedScene" uid="uid://c5yroomdiufhn" path="res://JUEGO/Scenes/MenuPausa/pausa.tscn" id="12_cqhg3"]
+[ext_resource type="AudioStream" uid="uid://dtk7gd7gbegs3" path="res://JUEGO/sound/puente.ogg" id="13_aircb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tp3vc"]
 texture = ExtResource("1_ecnho")
@@ -2529,6 +2531,7 @@ sources/0 = SubResource("TileSetAtlasSource_fi75l")
 sources/1 = SubResource("TileSetAtlasSource_e64ia")
 
 [node name="Fortaleza" type="Node2D"]
+script = ExtResource("1_p0s8d")
 metadata/_edit_horizontal_guides_ = [181.0]
 
 [node name="background" type="TileMapLayer" parent="."]
@@ -2620,7 +2623,6 @@ up_direction = Vector2(0, -1)
 
 [node name="Godofredo" parent="." instance=ExtResource("9_rs2xd")]
 position = Vector2(-374, 347)
-up_direction = Vector2(0.707107, -0.707107)
 
 [node name="Column2" type="Sprite2D" parent="."]
 position = Vector2(443, 352)
@@ -2639,3 +2641,7 @@ scale = Vector2(0.608, 0.511)
 texture = ExtResource("7_tp3vc")
 
 [node name="Pausa" parent="." instance=ExtResource("12_cqhg3")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_aircb")
+volume_db = -26.234

@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cksf51rg5c7b1"]
+[gd_scene load_steps=6 format=3 uid="uid://cksf51rg5c7b1"]
 
 [ext_resource type="Script" uid="uid://8xr6oapcvghf" path="res://JUEGO/Scenes/Fortaleza/fire.gd" id="1_wyp8g"]
+[ext_resource type="AudioStream" uid="uid://btvif1itglsrl" path="res://JUEGO/sound/fire.wav" id="2_2vbok"]
 
 [sub_resource type="Curve" id="Curve_xgy1x"]
 _data = [Vector2(0.106509, 1), 0.0, 0.0, 0, 0, Vector2(0.905325, 0.458943), 0.0, 0.0, 0, 0]
@@ -40,3 +41,8 @@ shape = SubResource("CapsuleShape2D_qte17")
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.51
 autostart = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_2vbok")
+max_distance = 4096.0
+attenuation = 16.0
