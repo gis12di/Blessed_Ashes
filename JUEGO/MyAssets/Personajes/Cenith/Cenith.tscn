@@ -504,8 +504,12 @@ frame_progress = 0.559073
 
 [node name="CenithDealDamageZone" type="Area2D" parent="."]
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CenithDealDamageZone"]
+position = Vector2(-21, 0)
+shape = SubResource("CapsuleShape2D_yx4nn")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CenithDealDamageZone"]
-position = Vector2(21, 0)
+position = Vector2(23, 0)
 shape = SubResource("CapsuleShape2D_yx4nn")
 
 [node name="CenithHitbox" type="Area2D" parent="."]
