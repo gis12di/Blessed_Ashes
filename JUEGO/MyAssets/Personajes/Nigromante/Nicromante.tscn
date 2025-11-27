@@ -1212,9 +1212,11 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kbt3g"]
-height = 52.0
+radius = 11.0
+height = 40.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_22te4"]
+radius = 12.0416
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5ne4l"]
 radius = 13.4164
@@ -1230,7 +1232,7 @@ frame_progress = 0.710443
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, 14)
+position = Vector2(0, -2)
 shape = SubResource("CapsuleShape2D_kbt3g")
 
 [node name="DireccionTimer" type="Timer" parent="."]
@@ -1239,13 +1241,13 @@ autostart = true
 [node name="nicromanteHitbox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="nicromanteHitbox"]
-position = Vector2(-1, 11)
+position = Vector2(1, -1)
 shape = SubResource("CircleShape2D_22te4")
 
 [node name="nicromanteDealDamageArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="nicromanteDealDamageArea"]
-position = Vector2(-1, 11)
+position = Vector2(1, 0)
 shape = SubResource("CircleShape2D_5ne4l")
 
 [connection signal="timeout" from="DireccionTimer" to="." method="_on_direccion_timer_timeout"]
