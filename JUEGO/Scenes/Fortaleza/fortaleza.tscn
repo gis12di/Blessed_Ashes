@@ -2620,6 +2620,7 @@ up_direction = Vector2(0, -1)
 
 [node name="Godofredo" parent="." instance=ExtResource("9_rs2xd")]
 position = Vector2(-374, 347)
+up_direction = Vector2(0.707107, -0.707107)
 
 [node name="Column2" type="Sprite2D" parent="."]
 position = Vector2(443, 352)
