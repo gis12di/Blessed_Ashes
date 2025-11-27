@@ -1,6 +1,7 @@
-[gd_scene load_steps=26 format=4 uid="uid://dktwygg5rsfl6"]
+[gd_scene load_steps=28 format=4 uid="uid://dktwygg5rsfl6"]
 
 [ext_resource type="PackedScene" uid="uid://cpg4jsmfgna3p" path="res://JUEGO/MyAssets/Personajes/Cenith/Cenith.tscn" id="1_6idw4"]
+[ext_resource type="Script" uid="uid://bwuwhp7mntvcj" path="res://JUEGO/Scenes/Puente/puente_fortaleza.gd" id="1_dygjr"]
 [ext_resource type="Texture2D" uid="uid://nqt2g8eje5xl" path="res://JUEGO/Scenes/FondoPuente/fondo1.jpg" id="1_yqk44"]
 [ext_resource type="Texture2D" uid="uid://btf6e8puxrqul" path="res://JUEGO/Scenes/FondoPuente/fondo2.png" id="2_vsqn7"]
 [ext_resource type="Texture2D" uid="uid://w2scu5dv0vuu" path="res://JUEGO/Scenes/Fortaleza/oppcastle-mod-tiles.png" id="2_ymseb"]
@@ -12,10 +13,11 @@
 [ext_resource type="Texture2D" uid="uid://da4dx6edtr5ur" path="res://JUEGO/Scenes/Puente/puente-fortaleza.png" id="8_vsqn7"]
 [ext_resource type="Texture2D" uid="uid://x3jetm31ik5m" path="res://JUEGO/Scenes/Fortaleza/oppcastle-tiles.png" id="10_lna1f"]
 [ext_resource type="Shader" uid="uid://dqr8eteihljvt" path="res://JUEGO/Scenes/Puente/Difuminado.gdshader" id="11_21wat"]
-[ext_resource type="Texture2D" uid="uid://b3e3wxnae4q78" path="res://JUEGO/Scenes/plataformas.png" id="12_tagal"]
+[ext_resource type="Texture2D" uid="uid://b3e3wxnae4q78" path="res://JUEGO/Scenes/Puente/plataformas.png" id="12_tagal"]
 [ext_resource type="Script" uid="uid://br7t7annljs6u" path="res://JUEGO/Scenes/Puente/puerta.gd" id="14_y3p1d"]
 [ext_resource type="Script" uid="uid://cmpt3kv7l6mjs" path="res://JUEGO/Scenes/Puente/killzone.gd" id="15_y70mn"]
 [ext_resource type="PackedScene" uid="uid://c5yroomdiufhn" path="res://JUEGO/Scenes/MenuPausa/pausa.tscn" id="17_qvvjl"]
+[ext_resource type="AudioStream" uid="uid://dtk7gd7gbegs3" path="res://JUEGO/sound/puente.ogg" id="18_qoidv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ymseb"]
 texture = ExtResource("10_lna1f")
@@ -891,6 +893,7 @@ height = 28.1735
 size = Vector2(1852.5, 53)
 
 [node name="Puente_Fortaleza" type="Node2D"]
+script = ExtResource("1_dygjr")
 metadata/_edit_horizontal_guides_ = [-33.0]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -1015,6 +1018,11 @@ position = Vector2(813.75, 204)
 shape = SubResource("RectangleShape2D_tagal")
 
 [node name="Pausa" parent="." instance=ExtResource("17_qvvjl")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_qoidv")
+volume_db = -25.298
+pitch_scale = 0.21
 
 [connection signal="body_entered" from="Puerta" to="Puerta" method="_on_body_entered"]
 [connection signal="body_entered" from="killzone" to="killzone" method="_on_body_entered"]

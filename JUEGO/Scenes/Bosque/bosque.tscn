@@ -1,11 +1,13 @@
-[gd_scene load_steps=13 format=4 uid="uid://d2ysvfxrwfcn4"]
+[gd_scene load_steps=15 format=4 uid="uid://d2ysvfxrwfcn4"]
 
 [ext_resource type="Texture2D" uid="uid://d1e3dsy1oedon" path="res://JUEGO/Scenes/Bosque/PNG/environment/layers/background.png" id="1_14o4v"]
+[ext_resource type="Script" uid="uid://byadlsm3k1mvu" path="res://JUEGO/Scenes/Bosque/bosque.gd" id="1_kkfd7"]
 [ext_resource type="Texture2D" uid="uid://7qhfnuknbkrp" path="res://JUEGO/Scenes/Bosque/PNG/environment/layers/middleground.png" id="2_nidul"]
 [ext_resource type="Texture2D" uid="uid://bmxvya8j84osf" path="res://JUEGO/Scenes/Bosque/PNG/environment/layers/tileset.png" id="3_nidul"]
 [ext_resource type="PackedScene" uid="uid://cpg4jsmfgna3p" path="res://JUEGO/MyAssets/Personajes/Cenith/Cenith.tscn" id="4_gvvxv"]
-[ext_resource type="Texture2D" uid="uid://b3fbbs47th75r" path="res://JUEGO/Scenes/Bosque/demo/assets/atlas/atlas-props.png" id="4_i4ycc"]
-[ext_resource type="Texture2D" uid="uid://dave27a2usbin" path="res://JUEGO/Scenes/Bosque/demo/assets/environment/tileset.png" id="5_ik2kh"]
+[ext_resource type="Texture2D" uid="uid://b3fbbs47th75r" path="res://JUEGO/Scenes/Bosque/atlas/atlas-props.png" id="4_i4ycc"]
+[ext_resource type="Texture2D" uid="uid://dave27a2usbin" path="res://JUEGO/Scenes/Bosque/environment/tileset.png" id="5_ik2kh"]
+[ext_resource type="AudioStream" uid="uid://78mdmlws2nx1" path="res://JUEGO/sound/enchanted_forest_loop.ogg" id="7_ums55"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gvvxv"]
 texture = ExtResource("3_nidul")
@@ -922,6 +924,7 @@ sources/1 = SubResource("TileSetAtlasSource_i4ycc")
 sources/2 = SubResource("TileSetAtlasSource_ums55")
 
 [node name="Bosque" type="Node2D"]
+script = ExtResource("1_kkfd7")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 scale = Vector2(1.1, 1.3)
@@ -967,3 +970,8 @@ rotation = 0.00129717
 scale = Vector2(0.333333, 0.333333)
 zoom = Vector2(4, 4)
 limit_top = 0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_ums55")
+volume_db = -3.748
+pitch_scale = 0.35
