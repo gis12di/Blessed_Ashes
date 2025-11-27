@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3csxaoflk7ky"
-path="res://.godot/imported/spr_NecromancerWalk_strip10.png-5a9e806735710b40fa129912705f56fb.ctex"
+uid="uid://b4kqw0bwqwpgb"
+path="res://.godot/imported/ataque.png-540758163c648b18a808e570fabfc957.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://JUEGO/MyAssets/Personajes/Nigromante/Walk/spr_NecromancerWalk_strip10.png"
-dest_files=["res://.godot/imported/spr_NecromancerWalk_strip10.png-5a9e806735710b40fa129912705f56fb.ctex"]
+source_file="res://JUEGO/MyAssets/Personajes/Nigromante/ataque.png"
+dest_files=["res://.godot/imported/ataque.png-540758163c648b18a808e570fabfc957.ctex"]
 
 [params]
 

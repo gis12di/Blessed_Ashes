@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnjpc1jqf5e1j"
-path="res://.godot/imported/spr_NecromancerSpawn_strip20.png-1177936764f906fcf6cc6e9d26b7561d.ctex"
+uid="uid://3csxaoflk7ky"
+path="res://.godot/imported/caminar.png-ca88b0f22f068cfa7e336390c7263710.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://JUEGO/MyAssets/Personajes/Nigromante/Spawn/spr_NecromancerSpawn_strip20.png"
-dest_files=["res://.godot/imported/spr_NecromancerSpawn_strip20.png-1177936764f906fcf6cc6e9d26b7561d.ctex"]
+source_file="res://JUEGO/MyAssets/Personajes/Nigromante/caminar.png"
+dest_files=["res://.godot/imported/caminar.png-ca88b0f22f068cfa7e336390c7263710.ctex"]
 
 [params]
 

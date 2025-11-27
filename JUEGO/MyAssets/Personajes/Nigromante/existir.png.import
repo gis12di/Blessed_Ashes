@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6mo5xq73efg0"
-path="res://.godot/imported/spr_NecromancerGetHitEffectWithBkg_strip9.png-a0dfa7ec645536fa000d9c70925ea4d6.ctex"
+uid="uid://pw5mvcnl53nb"
+path="res://.godot/imported/existir.png-bc09ddd5d246ed40e5c1b7c1c37a9e05.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://JUEGO/MyAssets/Personajes/Nigromante/GetHit/spr_NecromancerGetHitEffectWithBkg_strip9.png"
-dest_files=["res://.godot/imported/spr_NecromancerGetHitEffectWithBkg_strip9.png-a0dfa7ec645536fa000d9c70925ea4d6.ctex"]
+source_file="res://JUEGO/MyAssets/Personajes/Nigromante/existir.png"
+dest_files=["res://.godot/imported/existir.png-bc09ddd5d246ed40e5c1b7c1c37a9e05.ctex"]
 
 [params]
 

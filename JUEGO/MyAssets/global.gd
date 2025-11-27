@@ -20,3 +20,9 @@ var hongoDamageAmount: int
 
 var corredorDamageZone:Area2D
 var corredorDamageAmount: int
+
+var nymiraDamageZone:Area2D
+var nymiraDamageAmount: int
+
+var nicromanteamageZone:Area2D
+var nicromanteDamageAmount: int

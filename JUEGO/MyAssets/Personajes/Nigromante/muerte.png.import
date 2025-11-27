@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bt4lu4ej83lmk"
-path="res://.godot/imported/B_witch_death.png-20744cac8b5730943071bf5673bf2e4d.ctex"
+uid="uid://pt4du6hustdf"
+path="res://.godot/imported/muerte.png-9cfa986efade182f3208b89685f2bfce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://JUEGO/MyAssets/Personajes/Nymira/Blue_witch/B_witch_death.png"
-dest_files=["res://.godot/imported/B_witch_death.png-20744cac8b5730943071bf5673bf2e4d.ctex"]
+source_file="res://JUEGO/MyAssets/Personajes/Nigromante/muerte.png"
+dest_files=["res://.godot/imported/muerte.png-9cfa986efade182f3208b89685f2bfce.ctex"]
 
 [params]
 

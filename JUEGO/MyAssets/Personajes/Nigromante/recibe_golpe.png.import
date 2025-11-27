@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxrt5uknl2y8a"
-path="res://.godot/imported/spr_NecromancerGetHitEffect_strip9.png-92a2a206f7176d1c750d4d5866470cae.ctex"
+uid="uid://d1rcdh8agi44w"
+path="res://.godot/imported/recibe_golpe.png-e8f753305fefd071ed7ad01b6e5688fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://JUEGO/MyAssets/Personajes/Nigromante/GetHit/spr_NecromancerGetHitEffect_strip9.png"
-dest_files=["res://.godot/imported/spr_NecromancerGetHitEffect_strip9.png-92a2a206f7176d1c750d4d5866470cae.ctex"]
+source_file="res://JUEGO/MyAssets/Personajes/Nigromante/recibe_golpe.png"
+dest_files=["res://.godot/imported/recibe_golpe.png-e8f753305fefd071ed7ad01b6e5688fe.ctex"]
 
 [params]
 
