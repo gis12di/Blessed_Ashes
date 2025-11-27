@@ -5,8 +5,8 @@ class_name nymira
 const speed = 20
 var is_nymira_chase: bool = false  # Cambiado a false por defecto
 
-var health = 100
-var health_max = 100
+var health = 150
+var health_max = 150
 var hearlt_min = 0
 
 var dead : bool = false

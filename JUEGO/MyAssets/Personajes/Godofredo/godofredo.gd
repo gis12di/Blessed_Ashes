@@ -5,8 +5,8 @@ class_name godofredo
 const speed = 30
 var is_godofredo_chase: bool = true
 
-var health = 100
-var health_max = 100
+var health = 150
+var health_max = 150
 var health_min = 0
 
 var dead : bool = false
