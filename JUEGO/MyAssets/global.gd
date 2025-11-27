@@ -11,3 +11,12 @@ var esqueletoDamageAmount: int
 
 var godofredoDamageZone:Area2D
 var godofredoDamageAmount: int
+
+var goblinDamageZone:Area2D
+var goblinDamageAmount: int
+
+var hongoDamageZone:Area2D
+var hongoDamageAmount: int
+
+var corredorDamageZone:Area2D
+var corredorDamageAmount: int

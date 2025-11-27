@@ -88,6 +88,15 @@ func check_hitbox():
 	
 	elif hitbox.get_parent() is godofredo:
 		damage = Global.godofredoDamageAmount
+	
+	elif hitbox.get_parent() is goblin:
+		damage = Global.goblinDamageAmount
+	
+	elif hitbox.get_parent() is hongo:
+		damage = Global.hongoDamageAmount
+	
+	elif hitbox.get_parent() is corredor:
+		damage = Global.corredorDamageAmount
 
 	if damage > 0 and can_take_damage:                
 		can_take_damage = false

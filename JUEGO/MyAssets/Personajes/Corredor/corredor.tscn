@@ -1,6 +1,6 @@
 [gd_scene load_steps=62 format=3 uid="uid://chk7b76amts7h"]
 
-[ext_resource type="Script" uid="uid://dka3riuopaq1u" path="res://JUEGO/MyAssets/Personajes/esqueleto/esqueleto.gd" id="1_ski4t"]
+[ext_resource type="Script" uid="uid://1hvxaqkxkg4b" path="res://JUEGO/MyAssets/Personajes/Corredor/corredor.gd" id="1_6k3pi"]
 [ext_resource type="Texture2D" uid="uid://tnvfpfparwcm" path="res://JUEGO/MyAssets/Personajes/Corredor/NightBorne.png" id="2_6k3pi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e13yg"]
@@ -417,16 +417,15 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kbt3g"]
-height = 52.0
+height = 32.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_22te4"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6k3pi"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_5ne4l"]
-radius = 13.4164
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e13yg"]
 
-[node name="Esqueleto" type="CharacterBody2D"]
+[node name="Corredor" type="CharacterBody2D"]
 up_direction = Vector2(0.707107, -0.707107)
-script = ExtResource("1_ski4t")
+script = ExtResource("1_6k3pi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_md0t1")
@@ -435,24 +434,24 @@ frame_progress = 0.504741
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, 14)
+position = Vector2(-3, 10)
 shape = SubResource("CapsuleShape2D_kbt3g")
 
 [node name="DireccionTimer" type="Timer" parent="."]
 autostart = true
 
-[node name="esqueletoHitbox" type="Area2D" parent="."]
+[node name="corredorHitbox" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="esqueletoHitbox"]
-position = Vector2(-1, 11)
-shape = SubResource("CircleShape2D_22te4")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="corredorHitbox"]
+position = Vector2(-3, 10)
+shape = SubResource("CapsuleShape2D_6k3pi")
 
-[node name="esqueletoDealDamageArea" type="Area2D" parent="."]
+[node name="corredorDealDamageArea" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="esqueletoDealDamageArea"]
-position = Vector2(-1, 11)
-shape = SubResource("CircleShape2D_5ne4l")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="corredorDealDamageArea"]
+position = Vector2(-3, 10)
+shape = SubResource("CapsuleShape2D_e13yg")
 
 [connection signal="timeout" from="DireccionTimer" to="." method="_on_direccion_timer_timeout"]
-[connection signal="area_entered" from="esqueletoHitbox" to="." method="_on_esqueleto_hitbox_area_entered"]
-[connection signal="area_entered" from="esqueletoDealDamageArea" to="." method="_on_esqueleto_deal_damage_area_area_entered"]
+[connection signal="area_entered" from="corredorHitbox" to="." method="_on_corredor_hitbox_area_entered"]
+[connection signal="area_entered" from="corredorDealDamageArea" to="." method="_on_corredor_deal_damage_area_area_entered"]

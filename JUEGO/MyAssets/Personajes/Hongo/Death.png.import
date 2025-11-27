@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dl0ryxclcl172"
-path="res://.godot/imported/Attack.png-f3ae8fb2f9487cbf9cdd6cb304beaa4f.ctex"
+uid="uid://c4otinb86ag84"
+path="res://.godot/imported/Death.png-1bdb061078a8b72a86ecf23b064e1d4f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://JUEGO/MyAssets/Personajes/Mushroom/Attack.png"
-dest_files=["res://.godot/imported/Attack.png-f3ae8fb2f9487cbf9cdd6cb304beaa4f.ctex"]
+source_file="res://JUEGO/MyAssets/Personajes/Hongo/Death.png"
+dest_files=["res://.godot/imported/Death.png-1bdb061078a8b72a86ecf23b064e1d4f.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8sbio2i84ymt"
-path="res://.godot/imported/Take Hit.png-5851c8a13cf75d20883ed851f0d5e513.ctex"
+uid="uid://dyfy4mwi2ni3c"
+path="res://.godot/imported/Idle.png-ec55b46b394baeb60e2880ef2b8f4727.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://JUEGO/MyAssets/Personajes/Mushroom/Take Hit.png"
-dest_files=["res://.godot/imported/Take Hit.png-5851c8a13cf75d20883ed851f0d5e513.ctex"]
+source_file="res://JUEGO/MyAssets/Personajes/Hongo/Idle.png"
+dest_files=["res://.godot/imported/Idle.png-ec55b46b394baeb60e2880ef2b8f4727.ctex"]
 
 [params]
 

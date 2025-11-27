@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4otinb86ag84"
-path="res://.godot/imported/Death.png-a2e144a8ca023e4127f35de5070fa1fa.ctex"
+uid="uid://c8sbio2i84ymt"
+path="res://.godot/imported/Take Hit.png-4a0408e0a34e1393c293728aef3f8e9a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://JUEGO/MyAssets/Personajes/Mushroom/Death.png"
-dest_files=["res://.godot/imported/Death.png-a2e144a8ca023e4127f35de5070fa1fa.ctex"]
+source_file="res://JUEGO/MyAssets/Personajes/Hongo/Take Hit.png"
+dest_files=["res://.godot/imported/Take Hit.png-4a0408e0a34e1393c293728aef3f8e9a.ctex"]
 
 [params]
 
