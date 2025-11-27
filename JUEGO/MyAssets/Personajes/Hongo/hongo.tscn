@@ -246,7 +246,7 @@ script = ExtResource("1_dh1e2")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_md0t1")
 animation = &"recibe_golpe"
-frame_progress = 0.494951
+frame_progress = 0.906476
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
